@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Apresentacao", "Apresentacao", "{BF859E6B-75E5-4A8E-9352-004EA8510DE2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Servicos", "Servicos", "{9FDE840D-FDE5-44E2-B007-9B12CF15C4AF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dominio", "Dominio", "{C2296504-015B-4F60-B7FF-981EF033C3A5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aplicacao", "Aplicacao", "{4133BD8A-16C5-4603-931C-D1835A91179E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{F2F40961-B657-487D-B3AF-6DFC710B2556}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CrossCutting", "CrossCutting", "{1B82F6DF-64E8-43F2-A563-DA2832D22D91}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{190AA880-6292-47F7-938D-8FCC76BE2750}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sigfaz.Portal", "Sigfaz.Portal\Sigfaz.Portal.csproj", "{4BC0FFA1-33D1-4DAF-B778-EA01AA351B23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sigfaz.Aplicacao", "Sigfaz.Aplicacao\Sigfaz.Aplicacao.csproj", "{63CF5F89-09A0-4E7B-A59C-94BBAABAFDDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sigfaz.Dominio", "Sigfaz.Dominio\Sigfaz.Dominio.csproj", "{15A359F4-A4D4-4F80-A3AB-9FABF0CED688}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sigfaz.Infra.Data", "Sigfaz.Infra.Data\Sigfaz.Infra.Data.csproj", "{704E9056-8C07-4BB7-9079-80387B8E0B9B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4BC0FFA1-33D1-4DAF-B778-EA01AA351B23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BC0FFA1-33D1-4DAF-B778-EA01AA351B23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BC0FFA1-33D1-4DAF-B778-EA01AA351B23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BC0FFA1-33D1-4DAF-B778-EA01AA351B23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63CF5F89-09A0-4E7B-A59C-94BBAABAFDDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63CF5F89-09A0-4E7B-A59C-94BBAABAFDDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63CF5F89-09A0-4E7B-A59C-94BBAABAFDDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63CF5F89-09A0-4E7B-A59C-94BBAABAFDDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15A359F4-A4D4-4F80-A3AB-9FABF0CED688}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15A359F4-A4D4-4F80-A3AB-9FABF0CED688}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15A359F4-A4D4-4F80-A3AB-9FABF0CED688}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15A359F4-A4D4-4F80-A3AB-9FABF0CED688}.Release|Any CPU.Build.0 = Release|Any CPU
+		{704E9056-8C07-4BB7-9079-80387B8E0B9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{704E9056-8C07-4BB7-9079-80387B8E0B9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{704E9056-8C07-4BB7-9079-80387B8E0B9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{704E9056-8C07-4BB7-9079-80387B8E0B9B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1B82F6DF-64E8-43F2-A563-DA2832D22D91} = {F2F40961-B657-487D-B3AF-6DFC710B2556}
+		{190AA880-6292-47F7-938D-8FCC76BE2750} = {F2F40961-B657-487D-B3AF-6DFC710B2556}
+		{4BC0FFA1-33D1-4DAF-B778-EA01AA351B23} = {BF859E6B-75E5-4A8E-9352-004EA8510DE2}
+		{63CF5F89-09A0-4E7B-A59C-94BBAABAFDDA} = {4133BD8A-16C5-4603-931C-D1835A91179E}
+		{15A359F4-A4D4-4F80-A3AB-9FABF0CED688} = {C2296504-015B-4F60-B7FF-981EF033C3A5}
+		{704E9056-8C07-4BB7-9079-80387B8E0B9B} = {190AA880-6292-47F7-938D-8FCC76BE2750}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {17F544AF-A1DB-41B3-9F1E-60DEBC86CDC0}
+	EndGlobalSection
+EndGlobal
