@@ -5,10 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sigfaz.Dominio.Interfaces
+namespace Sigfaz.Dominio.Interfaces.Repositorios
 {
-    public interface ICidadeRepository : IRepositoryBase<Cidade>
+    public interface IEstadoRepository : IRepositoryBase<Estado>
     {
-        IEnumerable<Cidade> BuscarPorEstado(string descricao);
     }
 }

@@ -12,7 +12,8 @@ namespace Sigfaz.Portal.AutoMapper
                     m.AddProfile<DomainToViewModelMappingProfile>();
                     m.AddProfile<ViewModelToDomainMappingProfile>();
                 });
-               
+
+                 Mapper = mapper.CreateMapper();
             }
         }
     }

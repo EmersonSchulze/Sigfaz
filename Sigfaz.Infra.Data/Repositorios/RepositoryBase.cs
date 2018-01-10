@@ -1,5 +1,5 @@
 ﻿using Portal.Infra.Data.Contexto;
-using Sigfaz.Dominio.Interfaces;
+using Sigfaz.Dominio.Interfaces.Repositorios;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;

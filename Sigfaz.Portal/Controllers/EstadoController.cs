@@ -1,31 +1,30 @@
 ﻿using AutoMapper;
+using Sigfaz.Aplicacao.Interfaces;
 using Sigfaz.Dominio.Entidades;
-using Sigfaz.Dominio.Interfaces;
-using Sigfaz.Infra.Data.Repositorios;
+using Sigfaz.Dominio.Interfaces.Repositorios;
+using Sigfaz.Portal.AutoMapper;
 using Sigfaz.Portal.ViewModels;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace Sigfaz.Portal.Controllers
 {
     public class EstadoController : Controller
     {
-        private readonly IEstadoRepository repositorio;
-       
-        public EstadoController(IEstadoRepository repositorio)
-        {
-           this.repositorio = repositorio;
-        }
+        private readonly IEstadoAppService appService;
+        private readonly IMapper mapper;
 
-        //private readonly EstadoRepository estadoRepository = new EstadoRepository();
+        public EstadoController(IEstadoAppService repositorio)
+        {
+           this.appService = repositorio;
+            mapper = AutoMapperConfig.Mapper;
+        }
 
         // GET: Estado
         public ActionResult Index()
         {
-            var estadoViewModel = Mapper.Map<IEnumerable<Estado>, IEnumerable<EstadoViewModel>>(repositorio.BuscaTodos());
+            var estadoViewModel = mapper.Map<IEnumerable<Estado>, IEnumerable<EstadoViewModel>>(appService.BuscaTodos());
+          //  var estadoViewModel = Mapper.Map<IEnumerable<Estado>, IEnumerable<EstadoViewModel>>(appService.BuscaTodos());
             return View(estadoViewModel);
         }
 
@@ -48,8 +47,8 @@ namespace Sigfaz.Portal.Controllers
         {
             if (ModelState.IsValid)
             {
-                var estadoDominio = Mapper.Map<EstadoViewModel, Estado>(viewModel);
-                repositorio.Incluir(estadoDominio);
+                var estadoDominio = mapper.Map<EstadoViewModel, Estado>(viewModel);
+                appService.Incluir(estadoDominio);
 
                 return RedirectToAction("Index");
             }

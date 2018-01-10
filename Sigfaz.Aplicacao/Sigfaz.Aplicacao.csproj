@@ -30,7 +30,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AppServiceBase.cs" />
+    <Compile Include="Especializadas\CidadeAppService.cs" />
+    <Compile Include="Especializadas\EstadoAppService.cs" />
+    <Compile Include="Interfaces\IAppServiceBase.cs" />
+    <Compile Include="Interfaces\ICidadeAppService.cs" />
+    <Compile Include="Interfaces\IEstadoAppService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sigfaz.Dominio\Sigfaz.Dominio.csproj">
+      <Project>{15A359F4-A4D4-4F80-A3AB-9FABF0CED688}</Project>
+      <Name>Sigfaz.Dominio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

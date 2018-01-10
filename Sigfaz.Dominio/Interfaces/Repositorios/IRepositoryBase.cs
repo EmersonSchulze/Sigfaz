@@ -1,7 +1,7 @@
 ﻿
 using System.Collections.Generic;
 
-namespace Sigfaz.Dominio.Interfaces
+namespace Sigfaz.Dominio.Interfaces.Repositorios
 {
     public interface IRepositoryBase<TEntity> where TEntity : class
     {

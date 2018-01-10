@@ -229,13 +229,13 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Sigfaz.Aplicacao\Sigfaz.Aplicacao.csproj">
+      <Project>{63cf5f89-09a0-4e7b-a59c-94bbaabafdda}</Project>
+      <Name>Sigfaz.Aplicacao</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Sigfaz.Dominio\Sigfaz.Dominio.csproj">
       <Project>{15A359F4-A4D4-4F80-A3AB-9FABF0CED688}</Project>
       <Name>Sigfaz.Dominio</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Sigfaz.Infra.Data\Sigfaz.Infra.Data.csproj">
-      <Project>{704E9056-8C07-4BB7-9079-80387B8E0B9B}</Project>
-      <Name>Sigfaz.Infra.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

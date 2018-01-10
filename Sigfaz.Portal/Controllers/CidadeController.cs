@@ -1,23 +1,28 @@
 ﻿using AutoMapper;
+using Sigfaz.Aplicacao.Interfaces;
 using Sigfaz.Dominio.Entidades;
-using Sigfaz.Infra.Data.Repositorios;
+using Sigfaz.Portal.AutoMapper;
 using Sigfaz.Portal.ViewModels;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace Sigfaz.Portal.Controllers
 {
     public class CidadeController : Controller
     {
-        private readonly CidadeRepository cidadeRepository = new CidadeRepository();
+        private readonly ICidadeAppService appService;
+        private readonly IMapper mapper;
+
+        public CidadeController(ICidadeAppService repositorio)
+        {
+            this.appService = repositorio;
+            mapper = AutoMapperConfig.Mapper;
+        }
 
         // GET: Cidade
         public ActionResult Index()
         {
-            var cidadeViewModel = Mapper.Map<IEnumerable<Cidade>, IEnumerable<CidadeViewModel>>(cidadeRepository.BuscaTodos());
+            var cidadeViewModel = mapper.Map<IEnumerable<Cidade>, IEnumerable<CidadeViewModel>>(appService.BuscaTodos());
             return View(cidadeViewModel);
         }
 
