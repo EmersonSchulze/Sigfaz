@@ -20,6 +20,7 @@ namespace Sigfaz.Portal.ViewModels
 
         public int EstadoId { get; set; }
 
+        [DisplayName("Estado")]
         public virtual Estado Estado { get; set; }
     }
 }

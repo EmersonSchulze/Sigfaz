@@ -17,6 +17,7 @@ namespace Sigfaz.Portal.Controllers
         {
             this.appService = repositorio;
             mapper = AutoMapperConfig.Mapper;
+
         }
 
         // GET: Cidade

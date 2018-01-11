@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<Sigfaz.Portal.ViewModels.CidadeViewModel>
 
 @{
-    ViewBag.Title = "View";
+    ViewBag.Title = "Cidades";
 }
 
 <h2>View</h2>
@@ -9,15 +9,15 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+<table class="table-responsive" id="TableCidade">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Nome)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.EstadoId)
+            @Html.DisplayNameFor(model => model.Estado)
         </th>
-        <th></th>
+      
     </tr>
 
 @foreach (var item in Model) {
@@ -26,12 +26,7 @@
             @Html.DisplayFor(modelItem => item.Nome)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.EstadoId)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.CidadeId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.CidadeId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.CidadeId })
+            @Html.DisplayFor(modelItem => item.Estado.Nome)
         </td>
     </tr>
 }

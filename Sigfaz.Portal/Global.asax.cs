@@ -1,4 +1,6 @@
 ﻿using Sigfaz.Portal.AutoMapper;
+using System.Configuration;
+using System.Data.Entity;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
@@ -10,7 +12,6 @@ namespace Sigfaz.Portal
     {
         protected void Application_Start()
         {
-            //Database.SetInitializer(new MigrateDatabaseToLatestVersion<SigfazContext, Configuration>());
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

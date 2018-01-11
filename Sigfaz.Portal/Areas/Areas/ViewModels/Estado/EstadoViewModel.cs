@@ -22,6 +22,7 @@ namespace Sigfaz.Portal.ViewModels
         [DisplayName("UF")]
         public string Sigla { get; set; }
 
+        [DisplayName("Código IBGE")]
         public int CodigoIbge { get; set; }
 
     }
