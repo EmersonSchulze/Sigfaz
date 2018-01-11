@@ -20,6 +20,7 @@ namespace Portal.Infra.Data.Contexto
         }
         public DbSet<Estado> Estados { get; set; }
         public DbSet<Cidade> Cidades { get; set; }
+		public DbSet<Usuario> Usuarios { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -42,6 +43,7 @@ namespace Portal.Infra.Data.Contexto
 
             modelBuilder.Configurations.Add(new EstadoConfiguration());
             modelBuilder.Configurations.Add(new CidadeConfiguration());
+			modelBuilder.Configurations.Add(new UsuarioConfig());
 
         }
 
