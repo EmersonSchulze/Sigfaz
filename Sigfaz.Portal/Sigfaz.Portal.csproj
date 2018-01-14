@@ -208,7 +208,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\SimpleInjectorInitializer.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Areas\AreasAreaRegistration.cs" />
+    <Compile Include="Areas\Cidade\CidadeAreaRegistration.cs" />
+    <Compile Include="Areas\Estado\EstadoAreaRegistration.cs" />
     <Compile Include="AutoMapper\AutoMapperConfig.cs" />
     <Compile Include="AutoMapper\DomainToViewModelMappingProfile.cs" />
     <Compile Include="AutoMapper\ViewModelToDomainMappingProfile.cs" />
@@ -239,7 +240,9 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Areas\Estado\View\web.config" />
+    <Content Include="Areas\Estado\Views\web.config" />
+    <Content Include="Areas\Cidade\Views\web.config" />
+    <Content Include="Areas\Estado\Views\Estado\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -265,7 +268,7 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Areas\Estado\View\Index.cshtml" />
+    <Content Include="Areas\Estado\Views\Index.cshtml" />
     <Content Include="Areas\Cidade\Views\Index.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
     <Content Include="Views\Account\DisplayEmail.cshtml" />
@@ -296,7 +299,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Estado\View\Shared\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

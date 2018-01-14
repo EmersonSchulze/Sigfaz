@@ -1,13 +1,13 @@
-﻿using AutoMapper;
-using Sigfaz.Aplicacao.Interfaces;
-using Sigfaz.Portal.Areas.Estado.ViewModels;
-using Sigfaz.Portal.AutoMapper;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Web.Mvc;
+using AutoMapper;
+using Sigfaz.Aplicacao.Interfaces;
+using Sigfaz.Portal.Areas.Estado.ViewModel;
+using Sigfaz.Portal.AutoMapper;
 
-namespace Sigfaz.Portal.Areas.Estado.Controllers
+namespace Sigfaz.Portal.Areas.Estado.Controller
 {
-    public class EstadoController : Controller
+    public class EstadoController : System.Web.Mvc.Controller
     {
         private readonly IEstadoAppService appService;
         private readonly IMapper mapper;
@@ -22,7 +22,7 @@ namespace Sigfaz.Portal.Areas.Estado.Controllers
         // GET: Estado
         public ActionResult Index()
         {
-            var estadoViewModel = mapper.Map<IEnumerable<Estado>, IEnumerable<EstadoViewModel>>(appService.BuscaTodos());
+            var estadoViewModel = mapper.Map<IEnumerable<Dominio.Entidades.Estado>, IEnumerable<EstadoViewModel>>(appService.BuscaTodos());
           //  var estadoViewModel = Mapper.Map<IEnumerable<Estado>, IEnumerable<EstadoViewModel>>(appService.BuscaTodos());
             return View(estadoViewModel);
         }
@@ -46,7 +46,7 @@ namespace Sigfaz.Portal.Areas.Estado.Controllers
         {
             if (ModelState.IsValid)
             {
-                var estadoDominio = mapper.Map<EstadoViewModel, Estado>(viewModel);
+                var estadoDominio = mapper.Map<EstadoViewModel, Dominio.Entidades.Estado>(viewModel);
                 appService.Incluir(estadoDominio);
 
                 return RedirectToAction("Index");

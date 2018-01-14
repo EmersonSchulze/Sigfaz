@@ -19,17 +19,7 @@ namespace Sigfaz.Portal
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
 
-            routes.MapRoute(
-                name: "Estados",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Estado", action = "Index", id = UrlParameter.Optional }
-            );
-
-            routes.MapRoute(
-                name: "Cidades",
-                url: "Areas/{controller}/{action}/{id}",
-                defaults: new { controller = "Cidade", action = "Index", id = UrlParameter.Optional }
-            );
+           
         }
     }
 }

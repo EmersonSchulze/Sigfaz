@@ -1,4 +1,4 @@
-﻿using Sigfaz.Dominio.Entidades;
+﻿
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
@@ -17,6 +17,6 @@ namespace Sigfaz.Portal.Areas.Cidade.ViewModels
         public int EstadoId { get; set; }
 
         [DisplayName("Estado")]
-        public virtual Estado Estado { get; set; }
+        public virtual Dominio.Entidades.Estado Estado { get; set; }
     }
 }

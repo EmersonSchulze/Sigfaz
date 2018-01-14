@@ -22,7 +22,7 @@ namespace Sigfaz.Portal.Areas.Cidade.Controllers
         // GET: Cidade
         public ActionResult Index()
         {
-            var cidadeViewModel = mapper.Map<IEnumerable<Cidade>, IEnumerable<CidadeViewModel>>(appService.BuscaTodos());
+            var cidadeViewModel = mapper.Map<IEnumerable<Dominio.Entidades.Cidade>, IEnumerable<CidadeViewModel>>(appService.BuscaTodos());
             return View(cidadeViewModel);
         }
 

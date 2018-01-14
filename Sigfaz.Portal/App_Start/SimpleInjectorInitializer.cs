@@ -1,26 +1,18 @@
+using System.Reflection;
+using System.Web;
+using System.Web.Mvc;
 using Microsoft.Owin;
-using Sigfaz.Aplicacao;
-using Sigfaz.Aplicacao.Especializadas;
-using Sigfaz.Aplicacao.Interfaces;
-using Sigfaz.Dominio.Interfaces.Repositorios;
-using Sigfaz.Dominio.Interfaces.Servicos;
-using Sigfaz.Dominio.Servicos;
 using Sigfaz.Infra.CrossCutting.IoC;
-using Sigfaz.Infra.Data.Repositorios;
-using Sigfaz.Portal.App_Start;
+using Sigfaz.Portal;
 using SimpleInjector;
 using SimpleInjector.Advanced;
 using SimpleInjector.Integration.Web;
 using SimpleInjector.Integration.Web.Mvc;
-using System.Reflection;
-using System.Web;
-using System.Web.Mvc;
 using WebActivatorEx;
-
 
 [assembly: PostApplicationStartMethod(typeof(SimpleInjectorInitializer), "Initialize")]
 
-namespace Sigfaz.Portal.App_Start
+namespace Sigfaz.Portal
 {
     public static class SimpleInjectorInitializer
     {

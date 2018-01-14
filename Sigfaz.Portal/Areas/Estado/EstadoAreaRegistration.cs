@@ -1,27 +1,21 @@
 ﻿using System.Web.Mvc;
 
-namespace Sigfaz.Portal.Areas.Areas
+namespace Sigfaz.Portal.Areas.Estado
 {
-    public class AreasAreaRegistration : AreaRegistration 
+    public class EstadoAreaRegistration : AreaRegistration 
     {
         public override string AreaName 
         {
             get 
             {
-                return "Areas";
+                return "Estado";
             }
         }
 
         public override void RegisterArea(AreaRegistrationContext context) 
         {
             context.MapRoute(
-                "Basicos_Cidade",
-                "Cidade/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional }
-            );
-
-            context.MapRoute(
-                "Basicos_Estado",
+                "Estado_default",
                 "Estado/{controller}/{action}/{id}",
                 new { action = "Index", id = UrlParameter.Optional }
             );
