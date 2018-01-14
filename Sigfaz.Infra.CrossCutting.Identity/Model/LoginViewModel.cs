@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Sigfaz.Infra.Cross.Cutting.Identity.Model
+namespace Sigfaz.Infra.CrossCutting.Identity.Model
 {
     public class LoginViewModel
     {
@@ -11,10 +11,10 @@ namespace Sigfaz.Infra.Cross.Cutting.Identity.Model
 
         [Required]
         [DataType(DataType.Password)]
-        [Display(Name = "Senha")]
+        [Display(Name = "Password")]
         public string Password { get; set; }
 
-        [Display(Name = "Lembrar-me?")]
+        [Display(Name = "Remember me?")]
         public bool RememberMe { get; set; }
     }
 }

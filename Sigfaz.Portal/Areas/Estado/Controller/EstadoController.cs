@@ -1,19 +1,18 @@
 ﻿using AutoMapper;
 using Sigfaz.Aplicacao.Interfaces;
-using Sigfaz.Dominio.Entidades;
-using Sigfaz.Dominio.Interfaces.Repositorios;
+using Sigfaz.Portal.Areas.Estado.ViewModels;
 using Sigfaz.Portal.AutoMapper;
-using Sigfaz.Portal.ViewModels;
 using System.Collections.Generic;
 using System.Web.Mvc;
 
-namespace Sigfaz.Portal.Controllers
+namespace Sigfaz.Portal.Areas.Estado.Controllers
 {
     public class EstadoController : Controller
     {
         private readonly IEstadoAppService appService;
         private readonly IMapper mapper;
 
+        
         public EstadoController(IEstadoAppService repositorio)
         {
            this.appService = repositorio;

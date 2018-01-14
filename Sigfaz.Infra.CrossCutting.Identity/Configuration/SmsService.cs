@@ -1,8 +1,9 @@
-﻿using System.Threading.Tasks;
-using Microsoft.AspNet.Identity;
+﻿using Microsoft.AspNet.Identity;
+using System.Threading.Tasks;
 using Twilio;
+using Twilio.Rest.Api.V2010.Account;
 
-namespace Sigfaz.Infra.Cross.Cutting.Identity.Configuration
+namespace Sigfaz.Infra.CrossCutting.Identity.Configuration
 {
     public class SmsService : IIdentityMessageService
     {
@@ -14,9 +15,11 @@ namespace Sigfaz.Infra.Cross.Cutting.Identity.Configuration
             const string accountSid = "SEU ID";
             const string authToken = "SEU TOKEN";
 
-            var client = new TwilioRestClient(accountSid, authToken);
+            TwilioClient.Init(accountSid, authToken);
 
-            client.SendMessage("Seu Telefone", message.Destination, message.Body);
+            var messagem = MessageResource.Create("Seu Telefone", message.Destination, message.Body);
+
+
 
             return Task.FromResult(0);
         }

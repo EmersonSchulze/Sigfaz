@@ -27,7 +27,7 @@ namespace Sigfaz.Portal
 
             routes.MapRoute(
                 name: "Cidades",
-                url: "{controller}/{action}/{id}",
+                url: "Areas/{controller}/{action}/{id}",
                 defaults: new { controller = "Cidade", action = "Index", id = UrlParameter.Optional }
             );
         }

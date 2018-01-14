@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace Sigfaz.Portal.ViewModels
+namespace Sigfaz.Portal.Areas.Estado.ViewModels
 {
     public class EstadoViewModel
     {

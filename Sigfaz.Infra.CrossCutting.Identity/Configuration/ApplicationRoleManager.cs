@@ -3,9 +3,9 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
-using Sigfaz.Infra.Cross.Cutting.Identity.Context;
+using Sigfaz.Infra.CrossCutting.Identity.Context;
 
-namespace Sigfaz.Infra.Cross.Cutting.Identity.Configuration
+namespace Sigfaz.Infra.CrossCutting.Identity.Configuration
 {
     public class ApplicationRoleManager : RoleManager<IdentityRole>
     {

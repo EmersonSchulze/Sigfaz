@@ -2,11 +2,11 @@
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
-using Sigfaz.Infra.CrossCutting..Configuration;
-using Sigfaz.Infra.CrossCutting.Identity.Model;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
+using Sigfaz.Infra.CrossCutting.Identity.Configuration;
+using Sigfaz.Infra.CrossCutting.Identity.Model;
 
 namespace Sigfaz.Portal.Controllers
 {

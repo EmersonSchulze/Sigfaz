@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Sigfaz.Infra.Cross.Cutting.Identity.Model
+namespace Sigfaz.Infra.CrossCutting.Identity.Model
 {
     public class VerifyCodeViewModel
     {
@@ -12,7 +12,7 @@ namespace Sigfaz.Infra.Cross.Cutting.Identity.Model
         public string Code { get; set; }
         public string ReturnUrl { get; set; }
 
-        [Display(Name = "Relembrar site?")]
+        [Display(Name = "Remember this browser?")]
         public bool RememberBrowser { get; set; }
 
         public bool RememberMe { get; set; }

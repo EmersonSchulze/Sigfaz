@@ -48,7 +48,7 @@ namespace Portal.Infra.Data.Contexto
         }
 
           public override int SaveChanges()
-        {
+          {
             foreach(var entry in ChangeTracker.Entries().Where(entry => entry.Entity.GetType().GetProperty("DataCadastro") != null))
             {
                 if (entry.State == EntityState.Added)
@@ -63,7 +63,7 @@ namespace Portal.Infra.Data.Contexto
                 
             }
             return base.SaveChanges();
-        }
+          }
 
     }
 }

@@ -1,13 +1,7 @@
-﻿using System;
-using System.Configuration;
-using System.Net;
-using System.Net.Mail;
-using System.Net.Mime;
+﻿using Microsoft.AspNet.Identity;
 using System.Threading.Tasks;
-using System.Web;
-using Microsoft.AspNet.Identity;
 
-namespace Sigfaz.Infra.Cross.Cutting.Identity.Configuration
+namespace Sigfaz.Infra.CrossCutting.Identity.Configuration
 {
     public class EmailService : IIdentityMessageService
     {

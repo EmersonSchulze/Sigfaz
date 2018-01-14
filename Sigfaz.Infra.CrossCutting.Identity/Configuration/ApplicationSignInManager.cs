@@ -1,11 +1,11 @@
-﻿using System.Security.Claims;
-using System.Threading.Tasks;
-using Microsoft.AspNet.Identity.Owin;
+﻿using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
-using Sigfaz.Infra.Cross.Cutting.Identity.Model;
+using Sigfaz.Infra.CrossCutting.Identity.Model;
+using System.Security.Claims;
+using System.Threading.Tasks;
 
-namespace Sigfaz.Infra.Cross.Cutting.Identity.Configuration
+namespace Sigfaz.Infra.CrossCutting.Identity.Configuration
 {
     public class ApplicationSignInManager : SignInManager<ApplicationUser, string>
     {

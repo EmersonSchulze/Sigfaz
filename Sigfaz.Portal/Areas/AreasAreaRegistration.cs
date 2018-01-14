@@ -15,8 +15,14 @@ namespace Sigfaz.Portal.Areas.Areas
         public override void RegisterArea(AreaRegistrationContext context) 
         {
             context.MapRoute(
-                "Areas_default",
-                "Areas/{controller}/{action}/{id}",
+                "Basicos_Cidade",
+                "Cidade/{controller}/{action}/{id}",
+                new { action = "Index", id = UrlParameter.Optional }
+            );
+
+            context.MapRoute(
+                "Basicos_Estado",
+                "Estado/{controller}/{action}/{id}",
                 new { action = "Index", id = UrlParameter.Optional }
             );
         }

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Web.Mvc;
 
-namespace Sigfaz.Infra.Cross.Cutting.Identity.Model
+namespace Sigfaz.Infra.CrossCutting.Identity.Model
 {
     public class SendCodeViewModel
     {

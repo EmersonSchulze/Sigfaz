@@ -1,16 +1,16 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Sigfaz.Infra.Cross.Cutting.Identity.Model
+namespace Sigfaz.Infra.CrossCutting.Identity.Model
 {
     public class VerifyPhoneNumberViewModel
     {
         [Required]
-        [Display(Name = "Código de Área")]
+        [Display(Name = "Code")]
         public string Code { get; set; }
 
         [Required]
         [Phone]
-        [Display(Name = "Número do Telefone")]
+        [Display(Name = "Phone Number")]
         public string PhoneNumber { get; set; }
     }
 }

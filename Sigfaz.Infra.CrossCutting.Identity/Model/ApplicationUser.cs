@@ -1,9 +1,9 @@
-﻿using System.Security.Claims;
-using System.Threading.Tasks;
-using Microsoft.AspNet.Identity;
+﻿using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using System.Security.Claims;
+using System.Threading.Tasks;
 
-namespace Sigfaz.Infra.Cross.Cutting.Identity.Model
+namespace Sigfaz.Infra.CrossCutting.Identity.Model
 {
     public class ApplicationUser : IdentityUser
     {

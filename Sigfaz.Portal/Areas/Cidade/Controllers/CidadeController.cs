@@ -1,12 +1,11 @@
 ﻿using AutoMapper;
 using Sigfaz.Aplicacao.Interfaces;
-using Sigfaz.Dominio.Entidades;
 using Sigfaz.Portal.AutoMapper;
-using Sigfaz.Portal.ViewModels;
+using Sigfaz.Portal.Areas.Cidade.ViewModels;
 using System.Collections.Generic;
 using System.Web.Mvc;
 
-namespace Sigfaz.Portal.Controllers
+namespace Sigfaz.Portal.Areas.Cidade.Controllers
 {
     public class CidadeController : Controller
     {

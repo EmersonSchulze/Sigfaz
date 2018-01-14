@@ -1,10 +1,7 @@
 ﻿using AutoMapper;
 using Sigfaz.Dominio.Entidades;
-using Sigfaz.Portal.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using Sigfaz.Portal.Areas.Estado.ViewModels;
+using Sigfaz.Portal.Areas.Cidade.ViewModels;
 
 namespace Sigfaz.Portal.AutoMapper
 {
@@ -17,9 +14,9 @@ namespace Sigfaz.Portal.AutoMapper
             // .ForMember(vm => vm.Nome, map => map.MapFrom(s => s.Nome))
             //.ForMember(vm => vm.Sigla, map => map.MapFrom(s => s.Sigla));
             CreateMap<Cidade, CidadeViewModel>();
-                // .ForMember(vm => vm.CidadeId, map => map.MapFrom(s => s.CidadeId))
-                // .ForMember(vm => vm.Nome, map => map.MapFrom(s => s.Nome))
-                // .ForMember(vm => vm.EstadoId, map => map.MapFrom(s => s.Estado.EstadoId));
+            // .ForMember(vm => vm.CidadeId, map => map.MapFrom(s => s.CidadeId))
+            // .ForMember(vm => vm.Nome, map => map.MapFrom(s => s.Nome))
+            // .ForMember(vm => vm.EstadoId, map => map.MapFrom(s => s.Estado.EstadoId));
         }
     }
 }

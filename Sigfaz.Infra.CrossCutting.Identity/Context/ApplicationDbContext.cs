@@ -1,13 +1,15 @@
-﻿using System;
-using Microsoft.AspNet.Identity.EntityFramework;
-using Sigfaz.Infra.Cross.Cutting.Identity.Model;
+﻿using Microsoft.AspNet.Identity.EntityFramework;
+using Sigfaz.Infra.CrossCutting.Identity.Model;
+using System;
+using System.Data.Entity;
 
-namespace Sigfaz.Infra.Cross.Cutting.Identity.Context
+namespace Sigfaz.Infra.CrossCutting.Identity.Context
 {
+    [DbConfigurationType(typeof(MySql.Data.Entity.MySqlEFConfiguration))]
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>, IDisposable
     {
         public ApplicationDbContext()
-            : base("SigfazConnection", throwIfV1Schema: false)
+            : base("SigfazConection", throwIfV1Schema: false)
         {
         }
 

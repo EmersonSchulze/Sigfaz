@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Portal.Infra.Data.Contexto;
+using Sigfaz.Dominio.Entidades;
+using Sigfaz.Dominio.Interfaces.Repositorios;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -6,11 +9,11 @@ namespace Sigfaz.Infra.Data.Repositorios
 {
     public class UsuarioRepository : IUsuarioRepository
     {
-        private readonly IdentityIsolationContext _db;
+        private readonly SigfazContext _db;
 
         public UsuarioRepository()
         {
-            _db = new IdentityIsolationContext();
+            _db = new SigfazContext();
         }
 
         public Usuario ObterPorId(string id)

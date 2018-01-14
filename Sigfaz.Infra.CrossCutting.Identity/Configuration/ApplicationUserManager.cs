@@ -1,10 +1,10 @@
-﻿using System;
-using Microsoft.AspNet.Identity;
+﻿using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security.DataProtection;
-using Sigfaz.Infra.Cross.Cutting.Identity.Model;
+using Sigfaz.Infra.CrossCutting.Identity.Model;
+using System;
 
-namespace Sigfaz.Infra.Cross.Cutting.Identity.Configuration
+namespace Sigfaz.Infra.CrossCutting.Identity.Configuration
 {
     public class ApplicationUserManager : UserManager<ApplicationUser>
     {

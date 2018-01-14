@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-using Microsoft.AspNet.Identity;
+﻿using Microsoft.AspNet.Identity;
+using System.Collections.Generic;
 
-namespace Sigfaz.Infra.Cross.Cutting.Identity.Model
+namespace Sigfaz.Infra.CrossCutting.Identity.Model
 {
     public class IndexViewModel
     {
