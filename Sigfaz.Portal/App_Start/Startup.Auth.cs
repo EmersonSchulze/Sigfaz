@@ -1,6 +1,4 @@
-﻿using System;
-using System.Web.Mvc;
-using Microsoft.AspNet.Identity;
+﻿using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
@@ -8,6 +6,8 @@ using Microsoft.Owin.Security.DataProtection;
 using Owin;
 using Sigfaz.Infra.CrossCutting.Identity.Configuration;
 using Sigfaz.Infra.CrossCutting.Identity.Model;
+using System;
+using System.Web.Mvc;
 
 namespace Sigfaz.Portal
 {

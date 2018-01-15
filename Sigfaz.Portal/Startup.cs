@@ -1,6 +1,6 @@
-﻿using Sigfaz.Portal;
-using Microsoft.Owin;
+﻿using Microsoft.Owin;
 using Owin;
+using Sigfaz.Portal;
 
 [assembly: OwinStartupAttribute(typeof(Startup))]
 namespace Sigfaz.Portal

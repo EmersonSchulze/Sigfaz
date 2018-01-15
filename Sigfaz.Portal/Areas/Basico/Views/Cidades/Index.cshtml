@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Sigfaz.Portal.Areas.Cidade.ViewModels.CidadeViewModel>
+﻿@model IEnumerable<Sigfaz.Portal.Areas.Basico.ViewModels.Cidade.CidadeIndexViewModel>
 
 @{
     ViewBag.Title = "Cidades";
@@ -6,9 +6,6 @@
 
 <h2>View</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table-responsive" id="TableCidade">
     <tr>
         <th>
@@ -28,7 +25,10 @@
         <td>
             @Html.DisplayFor(modelItem => item.Estado.Nome)
         </td>
+        <td>
+            @Html.ActionLink("Detalhes", "Detalhes", new { id=item.CidadeId })
+        </td>
     </tr>
-}
+}   
 
 </table>

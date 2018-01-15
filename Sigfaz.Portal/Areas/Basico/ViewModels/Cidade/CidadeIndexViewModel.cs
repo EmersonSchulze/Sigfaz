@@ -1,10 +1,9 @@
-﻿
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace Sigfaz.Portal.Areas.Cidade.ViewModels
+namespace Sigfaz.Portal.Areas.Basico.ViewModels.Cidade
 {
-    public class CidadeViewModel
+    public class CidadeIndexViewModel
     {
         [Key]
         public int CidadeId { get; set; }

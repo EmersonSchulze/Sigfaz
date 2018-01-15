@@ -1,9 +1,9 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace Sigfaz.Portal.Areas.Estado.ViewModel
+namespace Sigfaz.Portal.Areas.Basico.ViewModels.Estado
 {
-    public class EstadoViewModel
+    public class EstadoIndexViewModel
     {
         [Key]
         public int EstadoId { get; set; }

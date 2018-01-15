@@ -1,14 +1,11 @@
-﻿@model IEnumerable<Sigfaz.Portal.Areas.Estado.ViewModel.EstadoViewModel>
+﻿@model IEnumerable<Sigfaz.Portal.Areas.Basico.ViewModels.Estado.EstadoIndexViewModel>
 
 @{
-    ViewBag.Title = "View";
+    ViewBag.Title = "Estados";
 }
 
 <h2>View</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
     <tr>
         <th>
@@ -35,9 +32,7 @@
             @Html.DisplayFor(modelItem => item.CodigoIbge)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.EstadoId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.EstadoId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.EstadoId })
+            @Html.ActionLink("Detalhes", "Detalhes", new { id=item.EstadoId })
         </td>
     </tr>
 }

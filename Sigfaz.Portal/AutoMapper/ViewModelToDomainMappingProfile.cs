@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Sigfaz.Dominio.Entidades;
-using Sigfaz.Portal.Areas.Cidade.ViewModels;
-using Sigfaz.Portal.Areas.Estado.ViewModel;
+using Sigfaz.Portal.Areas.Basico.ViewModels.Cidade;
+using Sigfaz.Portal.Areas.Basico.ViewModels.Estado;
 
 namespace Sigfaz.Portal.AutoMapper
 {
@@ -9,8 +9,8 @@ namespace Sigfaz.Portal.AutoMapper
     {
         public ViewModelToDomainMappingProfile()
         {
-            CreateMap<EstadoViewModel, Estado>();
-            CreateMap<CidadeViewModel, Cidade>();
+            CreateMap<EstadoIndexViewModel, Estado>();
+            CreateMap<CidadeIndexViewModel, Cidade>();
         }
     }
 }

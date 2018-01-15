@@ -1,6 +1,6 @@
 ﻿
-using System.Web.Mvc;
 using Sigfaz.Dominio.Interfaces.Repositorios;
+using System.Web.Mvc;
 
 namespace Sigfaz.Portal.Controllers
 {

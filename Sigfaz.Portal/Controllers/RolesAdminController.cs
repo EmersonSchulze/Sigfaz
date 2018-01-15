@@ -1,14 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using Sigfaz.Infra.CrossCutting.Identity.Configuration;
+using Sigfaz.Infra.CrossCutting.Identity.Model;
+using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
-using System.Web;
 using System.Web.Mvc;
-using Sigfaz.Infra.CrossCutting.Identity.Configuration;
-using Sigfaz.Infra.CrossCutting.Identity.Model;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
-using Microsoft.AspNet.Identity.Owin;
 
 namespace Sigfaz.Portal.Controllers
 {
