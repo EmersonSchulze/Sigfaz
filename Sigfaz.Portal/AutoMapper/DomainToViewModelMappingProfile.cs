@@ -4,6 +4,7 @@ using Sigfaz.Dominio.Entidades;
 using Sigfaz.Infra.CrossCutting.Identity.Model;
 using Sigfaz.Portal.Areas.Basico.ViewModels.Cidade;
 using Sigfaz.Portal.Areas.Basico.ViewModels.Estado;
+using Sigfaz.Portal.Areas.Basico.ViewModels.UnidadeMedida;
 
 namespace Sigfaz.Portal.AutoMapper
 {
@@ -21,7 +22,8 @@ namespace Sigfaz.Portal.AutoMapper
             // .ForMember(vm => vm.EstadoId, map => map.MapFrom(s => s.Estado.EstadoId));
             CreateMap<IdentityRole, RoleViewModel>();
 
-          
+            CreateMap<UnidadeMedida, UnidadeMedidaIndexViewModel>();
+
 
         }
     }

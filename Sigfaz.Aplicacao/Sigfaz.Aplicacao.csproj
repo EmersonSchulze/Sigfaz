@@ -32,10 +32,12 @@
   <ItemGroup>
     <Compile Include="AppServiceBase.cs" />
     <Compile Include="Especializadas\CidadeAppService.cs" />
+    <Compile Include="Especializadas\UnidadeMedidaAppService.cs" />
     <Compile Include="Especializadas\EstadoAppService.cs" />
+    <Compile Include="Interfaces\Especializadas\IUnidadeMedidaAppService.cs" />
     <Compile Include="Interfaces\IAppServiceBase.cs" />
-    <Compile Include="Interfaces\ICidadeAppService.cs" />
-    <Compile Include="Interfaces\IEstadoAppService.cs" />
+    <Compile Include="Interfaces\Especializadas\ICidadeAppService.cs" />
+    <Compile Include="Interfaces\Especializadas\IEstadoAppService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

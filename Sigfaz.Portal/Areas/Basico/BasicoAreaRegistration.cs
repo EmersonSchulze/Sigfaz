@@ -25,6 +25,12 @@ namespace Sigfaz.Portal.Areas.Basico
                 "Basico/Cidade/{controller}/{action}/{id}",
                 new { action = "Index", id = UrlParameter.Optional }
             );
+
+            context.MapRoute(
+                "UnidadeMedida_default",
+                "Basico/UnidadeMedida/{controller}/{action}/{id}",
+                new { action = "Index", id = UrlParameter.Optional }
+            );
         }
     }
 }

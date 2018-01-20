@@ -4,6 +4,7 @@ using Sigfaz.Portal.Areas.Basico.ViewModels.Estado;
 using Sigfaz.Portal.AutoMapper;
 using System.Collections.Generic;
 using System.Web.Mvc;
+using Sigfaz.Aplicacao.Interfaces.Especializadas;
 
 namespace Sigfaz.Portal.Areas.Basico.Controllers.Estado
 {

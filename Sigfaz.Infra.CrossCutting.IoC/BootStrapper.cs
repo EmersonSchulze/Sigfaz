@@ -3,6 +3,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Sigfaz.Aplicacao;
 using Sigfaz.Aplicacao.Especializadas;
 using Sigfaz.Aplicacao.Interfaces;
+using Sigfaz.Aplicacao.Interfaces.Especializadas;
 using Sigfaz.Dominio.Interfaces.Repositorios;
 using Sigfaz.Dominio.Interfaces.Servicos;
 using Sigfaz.Dominio.Servicos;
@@ -32,14 +33,17 @@ namespace Sigfaz.Infra.CrossCutting.IoC
             container.Register(typeof(IAppServiceBase<>), (typeof(AppServiceBase<>)), Lifestyle.Scoped);
             container.Register<ICidadeAppService, CidadeAppService>();
             container.Register<IEstadoAppService, EstadoAppService>();
+            container.Register<IUnidadeMedidaAppService, UnidadeMedidaAppService>();
 
             container.Register(typeof(IServiceBase<>), (typeof(ServiceBase<>)), Lifestyle.Scoped);
             container.Register<ICidadeService, CidadeService>();
             container.Register<IEstadoService, EstadoService>();
+            container.Register<IUnidadeMedidaService, UnidadeMedidaService>();
 
             container.Register(typeof(IRepositoryBase<>), (typeof(RepositoryBase<>)), Lifestyle.Scoped);
             container.Register<ICidadeRepository, CidadeRepository>();
             container.Register<IEstadoRepository, EstadoRepository>();
+            container.Register<IUnidadeMedidaRepository, UnidadeMedidaRepository>();
 
         } 
     }

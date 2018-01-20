@@ -20,6 +20,8 @@ namespace Sigfaz.Infra.Data.Contexto
         public DbSet<Cidade> Cidades { get; set; }
 		public DbSet<Usuario> Usuarios { get; set; }
 
+        public DbSet<UnidadeMedida> UnidadeMedidas { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             Database.SetInitializer<SigfazContext>(null);
@@ -42,6 +44,7 @@ namespace Sigfaz.Infra.Data.Contexto
             modelBuilder.Configurations.Add(new EstadoConfiguration());
             modelBuilder.Configurations.Add(new CidadeConfiguration());
 			modelBuilder.Configurations.Add(new UsuarioConfig());
+            modelBuilder.Configurations.Add(new UnidadeMedidaConfiguration());
 
         }
 

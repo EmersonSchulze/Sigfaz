@@ -6,7 +6,7 @@ namespace Sigfaz.Infra.Data.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(Sigfaz.Infra.Data.Contexto.SigfazContext context)

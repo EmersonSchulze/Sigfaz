@@ -2,6 +2,7 @@
 using Sigfaz.Dominio.Entidades;
 using Sigfaz.Dominio.Interfaces.Servicos;
 using System.Collections.Generic;
+using Sigfaz.Aplicacao.Interfaces.Especializadas;
 
 namespace Sigfaz.Aplicacao.Especializadas
 {

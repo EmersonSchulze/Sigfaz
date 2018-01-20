@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Sigfaz.Portal.Areas.Basico.ViewModels.UnidadeMedida.UnidadeMedidaIndexViewModel>
+
+@{
+    ViewBag.Title = "Unidade de Medida";
+}
+
+<h2>View</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sigla)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sigla)
+            </td>
+        </tr>
+    }
+
+</table>
