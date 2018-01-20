@@ -8,6 +8,8 @@ using Sigfaz.Infra.CrossCutting.Identity.Configuration;
 using Sigfaz.Infra.CrossCutting.Identity.Model;
 using System;
 using System.Web.Mvc;
+using Sigfaz.Infra.CrossCutting.Identity.Context;
+using Sigfaz.Infra.Data.Contexto;
 
 namespace Sigfaz.Portal
 {
@@ -18,13 +20,12 @@ namespace Sigfaz.Portal
         // For more information on configuring authentication, please visit http://go.microsoft.com/fwlink/?LinkId=301864
         public void ConfigureAuth(IAppBuilder app)
         {
-            // Configure the db context, user manager and signin manager to use a single instance per request
-            
+            app.CreatePerOwinContext<ApplicationDbContext>(ApplicationDbContext.Create);
+            app.CreatePerOwinContext<ApplicationRoleManager>(ApplicationRoleManager.Create);
             app.CreatePerOwinContext(() => DependencyResolver.Current.GetService<ApplicationUserManager>());
+            app.CreatePerOwinContext(() => DependencyResolver.Current.GetService<ApplicationRoleManager>());
 
-            // Enable the application to use a cookie to store information for the signed in user
-            // and to use a cookie to temporarily store information about a user logging in with a third party login provider
-            // Configure the sign in cookie
+
             app.UseCookieAuthentication(new CookieAuthenticationOptions
             {
                 AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,
@@ -66,6 +67,7 @@ namespace Sigfaz.Portal
             //    ClientId = "",
             //    ClientSecret = ""
             //});
+           
         }
     }
 }

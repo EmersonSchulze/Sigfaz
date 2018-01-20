@@ -7,6 +7,8 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using System.Web.Mvc;
+using AutoMapper;
+using Sigfaz.Portal.AutoMapper;
 
 namespace Sigfaz.Portal.Controllers
 {
@@ -14,21 +16,32 @@ namespace Sigfaz.Portal.Controllers
     {
 
         private readonly ApplicationRoleManager _roleManager;
-        private ApplicationUserManager _userManager;
-
+        private readonly ApplicationUserManager _userManager;
+        
         public RolesAdminController(ApplicationUserManager userManager, ApplicationRoleManager roleManager)
         {
-            _userManager = userManager;
-            _roleManager = roleManager;
+           _userManager = userManager;
+           _roleManager = roleManager;
+          
         }
 
-        
 
+        private async Task PopulateRoles()
+        {
+            var roles = new[] { "A", "B", "C", "D" };
+
+            foreach (string role in roles)
+            {
+                await _roleManager.CreateAsync(new IdentityRole(role));
+            }
+        }
         //
         // GET: /Roles/
         public ActionResult Index()
         {
-            return View(_roleManager.Roles);
+
+          
+           return View(_roleManager.Roles);
         }
 
         //
@@ -69,10 +82,12 @@ namespace Sigfaz.Portal.Controllers
         [HttpPost]
         public async Task<ActionResult> Create(RoleViewModel roleViewModel)
         {
-            if (ModelState.IsValid)
+             if (ModelState.IsValid)
             {
                 var role = new IdentityRole(roleViewModel.Name);
                 var roleresult = await _roleManager.CreateAsync(role);
+
+
                 if (!roleresult.Succeeded)
                 {
                     ModelState.AddModelError("", roleresult.Errors.First());

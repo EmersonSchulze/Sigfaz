@@ -5,6 +5,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Sigfaz.Infra.CrossCutting.Identity.Context;
 
+
 namespace Sigfaz.Infra.CrossCutting.Identity.Configuration
 {
     public class ApplicationRoleManager : RoleManager<IdentityRole>
@@ -17,7 +18,10 @@ namespace Sigfaz.Infra.CrossCutting.Identity.Configuration
 
         public static ApplicationRoleManager Create(IdentityFactoryOptions<ApplicationRoleManager> options,IOwinContext context)
         {
-            return new ApplicationRoleManager(new RoleStore<IdentityRole>(context.Get<ApplicationDbContext>()));
+            var manager = new ApplicationRoleManager(
+                new RoleStore<IdentityRole>(context.Get<ApplicationDbContext>()));
+            return manager;
+           
         }
     }
 }

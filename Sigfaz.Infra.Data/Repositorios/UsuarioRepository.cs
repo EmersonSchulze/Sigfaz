@@ -1,9 +1,9 @@
-﻿using Portal.Infra.Data.Contexto;
-using Sigfaz.Dominio.Entidades;
+﻿using Sigfaz.Dominio.Entidades;
 using Sigfaz.Dominio.Interfaces.Repositorios;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Sigfaz.Infra.Data.Contexto;
 
 namespace Sigfaz.Infra.Data.Repositorios
 {

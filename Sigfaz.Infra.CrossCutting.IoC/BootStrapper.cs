@@ -9,6 +9,7 @@ using Sigfaz.Dominio.Servicos;
 using Sigfaz.Infra.CrossCutting.Identity.Configuration;
 using Sigfaz.Infra.CrossCutting.Identity.Context;
 using Sigfaz.Infra.CrossCutting.Identity.Model;
+using Sigfaz.Infra.Data.Contexto;
 using Sigfaz.Infra.Data.Repositorios;
 using SimpleInjector;
 
@@ -22,7 +23,7 @@ namespace Sigfaz.Infra.CrossCutting.IoC
 
             container.Register<ApplicationDbContext>();
             container.Register<IUserStore<ApplicationUser>>(() => new UserStore<ApplicationUser>(new ApplicationDbContext()), Lifestyle.Scoped);
-            container.Register<IRoleStore<IdentityRole, string>>(() => new RoleStore<IdentityRole>());
+            container.Register<IRoleStore<IdentityRole, string>>(() => new RoleStore<IdentityRole>(new ApplicationDbContext()), Lifestyle.Scoped);
             container.Register<ApplicationRoleManager>();
             container.Register<ApplicationUserManager>();
             container.Register<ApplicationSignInManager>();
