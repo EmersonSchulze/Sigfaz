@@ -5,11 +5,10 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.DataProtection;
 using Owin;
 using Sigfaz.Infra.CrossCutting.Identity.Configuration;
+using Sigfaz.Infra.CrossCutting.Identity.Context;
 using Sigfaz.Infra.CrossCutting.Identity.Model;
 using System;
 using System.Web.Mvc;
-using Sigfaz.Infra.CrossCutting.Identity.Context;
-using Sigfaz.Infra.Data.Contexto;
 
 namespace Sigfaz.Portal
 {

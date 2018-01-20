@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
 
 namespace Sigfaz.Portal.Areas.Basico.ViewModels.Estado
 {

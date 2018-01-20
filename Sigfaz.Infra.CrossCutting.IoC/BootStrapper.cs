@@ -9,7 +9,6 @@ using Sigfaz.Dominio.Servicos;
 using Sigfaz.Infra.CrossCutting.Identity.Configuration;
 using Sigfaz.Infra.CrossCutting.Identity.Context;
 using Sigfaz.Infra.CrossCutting.Identity.Model;
-using Sigfaz.Infra.Data.Contexto;
 using Sigfaz.Infra.Data.Repositorios;
 using SimpleInjector;
 

@@ -7,8 +7,6 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using System.Web.Mvc;
-using AutoMapper;
-using Sigfaz.Portal.AutoMapper;
 
 namespace Sigfaz.Portal.Controllers
 {

@@ -1,11 +1,9 @@
-﻿using System;
+﻿using Sigfaz.Dominio.Entidades;
+using Sigfaz.Infra.Data.EntityConfig;
+using System;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
-using Microsoft.AspNet.Identity.EntityFramework;
-using Sigfaz.Dominio.Entidades;
-using Sigfaz.Infra.CrossCutting.Identity.Model;
-using Sigfaz.Infra.Data.EntityConfig;
 
 namespace Sigfaz.Infra.Data.Contexto
 {
