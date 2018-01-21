@@ -23,7 +23,7 @@ namespace Sigfaz.Infra.Data.Repositorios
             return Bd.Set<TEntity>().Find(id);
         }
 
-        public IEnumerable <TEntity> BuscaTodos()
+      public IEnumerable <TEntity> BuscaTodos()
         {
             return Bd.Set<TEntity>().ToList();
         }

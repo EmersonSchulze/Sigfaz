@@ -32,6 +32,13 @@
   <ItemGroup>
     <Compile Include="Contexto\SigfazContext.cs" />
     <Compile Include="EntityConfig\CidadeConfiguration.cs" />
+    <Compile Include="EntityConfig\ClassificacaoLoteConfiguration.cs" />
+    <Compile Include="EntityConfig\CulturaConfiguration.cs" />
+    <Compile Include="EntityConfig\DestinoDespesaConfiguration.cs" />
+    <Compile Include="EntityConfig\GrupoConfiguration.cs" />
+    <Compile Include="EntityConfig\ItemManutencaoConfiguration.cs" />
+    <Compile Include="EntityConfig\RacaConfiguration.cs" />
+    <Compile Include="EntityConfig\TipoSanidadeConfiguration.cs" />
     <Compile Include="EntityConfig\UnidadeMedidaConfiguration.cs" />
     <Compile Include="EntityConfig\EstadoConfiguration.cs" />
     <Compile Include="EntityConfig\UsuarioConfig.cs" />
@@ -42,6 +49,13 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorios\CidadeRepository.cs" />
+    <Compile Include="Repositorios\ClassificacaoLoteRepository.cs" />
+    <Compile Include="Repositorios\CulturaRepository.cs" />
+    <Compile Include="Repositorios\DestinoDespesaRepository.cs" />
+    <Compile Include="Repositorios\GrupoRepository.cs" />
+    <Compile Include="Repositorios\ItemManutencaoRepository.cs" />
+    <Compile Include="Repositorios\RacaRepository.cs" />
+    <Compile Include="Repositorios\TipoSanidadeRepository.cs" />
     <Compile Include="Repositorios\UnidadeMedidaRepository.cs" />
     <Compile Include="Repositorios\EstadoRepository.cs" />
     <Compile Include="Repositorios\RepositoryBase.cs" />

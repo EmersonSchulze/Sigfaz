@@ -19,8 +19,14 @@ namespace Sigfaz.Infra.Data.Contexto
         public DbSet<Estado> Estados { get; set; }
         public DbSet<Cidade> Cidades { get; set; }
 		public DbSet<Usuario> Usuarios { get; set; }
-
         public DbSet<UnidadeMedida> UnidadeMedidas { get; set; }
+        public DbSet<ClassificacaoLote> ClassificacaoLote { get; set; }
+        public DbSet<Cultura> Cultura { get; set; }
+        public DbSet<DestinoDespesa> DestinoDespesa { get; set; }
+        public DbSet<Grupo> Grupo { get; set; }
+        public DbSet<ItemManutencao> ItemManutencao { get; set; }
+        public DbSet<Raca> Raca { get; set; }
+        public DbSet<TipoSanidade> TipoSanidade { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

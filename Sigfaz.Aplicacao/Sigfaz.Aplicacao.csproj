@@ -32,8 +32,22 @@
   <ItemGroup>
     <Compile Include="AppServiceBase.cs" />
     <Compile Include="Especializadas\CidadeAppService.cs" />
+    <Compile Include="Especializadas\ClassificacaoLoteAppService.cs" />
+    <Compile Include="Especializadas\CulturaAppService.cs" />
+    <Compile Include="Especializadas\DestinoDespesaAppService.cs" />
+    <Compile Include="Especializadas\GrupoAppService.cs" />
+    <Compile Include="Especializadas\ItemManutencaoAppService.cs" />
+    <Compile Include="Especializadas\RacaAppService.cs" />
+    <Compile Include="Especializadas\TipoSanidadeAppService.cs" />
     <Compile Include="Especializadas\UnidadeMedidaAppService.cs" />
     <Compile Include="Especializadas\EstadoAppService.cs" />
+    <Compile Include="Interfaces\Especializadas\IClassificacaoLoteAppService.cs" />
+    <Compile Include="Interfaces\Especializadas\ICulturaAppService.cs" />
+    <Compile Include="Interfaces\Especializadas\IDestinoDespesaAppService.cs" />
+    <Compile Include="Interfaces\Especializadas\IGrupoAppService.cs" />
+    <Compile Include="Interfaces\Especializadas\IItemManutencaoAppService.cs" />
+    <Compile Include="Interfaces\Especializadas\ITipoSanidadeAppService.cs" />
+    <Compile Include="Interfaces\Especializadas\IRacaAppService.cs" />
     <Compile Include="Interfaces\Especializadas\IUnidadeMedidaAppService.cs" />
     <Compile Include="Interfaces\IAppServiceBase.cs" />
     <Compile Include="Interfaces\Especializadas\ICidadeAppService.cs" />
