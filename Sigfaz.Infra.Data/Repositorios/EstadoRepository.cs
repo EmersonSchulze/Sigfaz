@@ -1,10 +1,6 @@
 ﻿using Sigfaz.Dominio.Entidades;
-using Sigfaz.Dominio.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Sigfaz.Dominio.Interfaces.Repositorios;
+
 
 namespace Sigfaz.Infra.Data.Repositorios
 {

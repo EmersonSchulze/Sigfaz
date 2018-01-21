@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Sigfaz.Portal.Areas.Basico.ViewModels.Cidade.CidadeIndexViewModel>
+
+@{
+    ViewBag.Title = "Cidades";
+}
+
+<h2>View</h2>
+
+<table class="table-responsive" id="TableCidade">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado)
+        </th>
+      
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estado.Nome)
+        </td>
+        <td>
+            @Html.ActionLink("Detalhes", "Detalhes", new { id=item.CidadeId })
+        </td>
+    </tr>
+}   
+
+</table>

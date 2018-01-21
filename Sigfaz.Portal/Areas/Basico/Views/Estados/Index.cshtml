@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Sigfaz.Portal.Areas.Basico.ViewModels.Estado.EstadoIndexViewModel>
+
+@{
+    ViewBag.Title = "Estados";
+}
+
+<h2>View</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sigla)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodigoIbge)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sigla)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodigoIbge)
+        </td>
+        <td>
+            @Html.ActionLink("Detalhes", "Detalhes", new { id=item.EstadoId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,5 +1,5 @@
-﻿using Portal.Infra.Data.Contexto;
-using Sigfaz.Dominio.Interfaces;
+﻿using Sigfaz.Dominio.Interfaces.Repositorios;
+using Sigfaz.Infra.Data.Contexto;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -23,7 +23,7 @@ namespace Sigfaz.Infra.Data.Repositorios
             return Bd.Set<TEntity>().Find(id);
         }
 
-        public IEnumerable <TEntity> BuscaTodos()
+      public IEnumerable <TEntity> BuscaTodos()
         {
             return Bd.Set<TEntity>().ToList();
         }
