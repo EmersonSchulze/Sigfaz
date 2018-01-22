@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using Sigfaz.Dominio.Entidades;
+﻿using Sigfaz.Dominio.Entidades;
 using Sigfaz.Dominio.Interfaces.Repositorios;
+using System.Collections.Generic;
+using System.Linq;
 
 
 namespace Sigfaz.Infra.Data.Repositorios

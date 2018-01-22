@@ -1,5 +1,4 @@
-﻿using Sigfaz.Aplicacao.Interfaces;
-using Sigfaz.Aplicacao.Interfaces.Especializadas;
+﻿using Sigfaz.Aplicacao.Interfaces.Especializadas;
 using Sigfaz.Dominio.Entidades;
 using Sigfaz.Dominio.Interfaces.Servicos;
 

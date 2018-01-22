@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using Sigfaz.Dominio.Entidades;
+﻿using Sigfaz.Dominio.Entidades;
+using System.Collections.Generic;
 
 namespace Sigfaz.Aplicacao.Interfaces.Especializadas
 {
