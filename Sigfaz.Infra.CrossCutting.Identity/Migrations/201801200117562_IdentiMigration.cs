@@ -1,8 +1,7 @@
 namespace Sigfaz.Infra.CrossCutting.Identity.Migrations
 {
-    using System;
     using System.Data.Entity.Migrations;
-    
+
     public partial class IdentiMigration : DbMigration
     {
         public override void Up()

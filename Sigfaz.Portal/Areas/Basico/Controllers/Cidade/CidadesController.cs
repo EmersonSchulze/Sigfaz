@@ -1,10 +1,9 @@
 ﻿using AutoMapper;
-using Sigfaz.Aplicacao.Interfaces;
+using Sigfaz.Aplicacao.Interfaces.Especializadas;
 using Sigfaz.Portal.Areas.Basico.ViewModels.Cidade;
 using Sigfaz.Portal.AutoMapper;
 using System.Collections.Generic;
 using System.Web.Mvc;
-using Sigfaz.Aplicacao.Interfaces.Especializadas;
 
 namespace Sigfaz.Portal.Areas.Basico.Controllers.Cidade
 {

@@ -1,11 +1,9 @@
 ﻿using AutoMapper;
-using Sigfaz.Aplicacao.Interfaces;
-using Sigfaz.Portal.Areas.Basico.ViewModels.Estado;
+using Sigfaz.Aplicacao.Interfaces.Especializadas;
+using Sigfaz.Portal.Areas.Basico.ViewModels.UnidadeMedida;
 using Sigfaz.Portal.AutoMapper;
 using System.Collections.Generic;
 using System.Web.Mvc;
-using Sigfaz.Aplicacao.Interfaces.Especializadas;
-using Sigfaz.Portal.Areas.Basico.ViewModels.UnidadeMedida;
 
 namespace Sigfaz.Portal.Areas.Basico.Controllers.Estado
 {
