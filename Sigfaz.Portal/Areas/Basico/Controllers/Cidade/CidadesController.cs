@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace Sigfaz.Portal.Areas.Basico.Controllers.Cidade
 {
+   // [Authorize(Roles = "Administrador,")]
     public class CidadesController : Controller
     {
         private readonly ICidadeAppService appService;

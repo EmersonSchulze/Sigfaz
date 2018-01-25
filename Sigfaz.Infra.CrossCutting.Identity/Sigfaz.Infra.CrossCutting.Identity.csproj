@@ -219,12 +219,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Sigfaz.Infra.Data\Sigfaz.Infra.Data.csproj">
-      <Project>{704e9056-8c07-4bb7-9079-80387b8e0b9b}</Project>
-      <Name>Sigfaz.Infra.Data</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Migrations\201801200117562_IdentiMigration.resx">
       <DependentUpon>201801200117562_IdentiMigration.cs</DependentUpon>
     </EmbeddedResource>
