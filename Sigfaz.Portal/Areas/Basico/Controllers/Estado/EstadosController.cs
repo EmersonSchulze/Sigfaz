@@ -1,13 +1,17 @@
-﻿using AutoMapper;
+﻿using System;
+using AutoMapper;
 using Sigfaz.Aplicacao.Interfaces.Especializadas;
 using Sigfaz.Portal.Areas.Basico.ViewModels.Estado;
 using Sigfaz.Portal.AutoMapper;
 using System.Collections.Generic;
+using System.Linq;
 using System.Web.Mvc;
+using Sigfaz.Portal.Controllers;
+using Sigfaz.Portal.Domain;
 
 namespace Sigfaz.Portal.Areas.Basico.Controllers.Estado
 {
-    public class EstadosController : System.Web.Mvc.Controller
+    public class EstadosController : Controller
     {
         private readonly IEstadoAppService appService;
         private readonly IMapper mapper;
@@ -22,8 +26,11 @@ namespace Sigfaz.Portal.Areas.Basico.Controllers.Estado
         // GET: Estado
         public ActionResult Index()
         {
+            var data = new Data();
             var estadoViewModel = mapper.Map<IEnumerable<Dominio.Entidades.Estado>, IEnumerable<EstadoIndexViewModel>>(appService.BuscaTodos());
+            PartialView("_Navbar", data.navbarItems().ToList());
             return View(estadoViewModel);
+             
         }
 
         // GET: Estado/Details/5

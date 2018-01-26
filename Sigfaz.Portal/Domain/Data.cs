@@ -27,7 +27,8 @@ namespace Sigfaz.Portal.Domain
             menu.Add(new Navbar { Id = 16, nameOption = "Sample Pages", imageClass = "fa fa-files-o fa-fw", status = true, isParent = true, parentId = 0 });
             menu.Add(new Navbar { Id = 17, nameOption = "Blank Page", controller = "Home", action = "Blank", status = true, isParent = false, parentId = 16 });
             menu.Add(new Navbar { Id = 18, nameOption = "Login Page", controller = "Home", action = "Login", status = true, isParent = false, parentId = 16 });
-            menu.Add(new Navbar { Id = 19, nameOption = "Basicos", controller = "Estados", action = "Index", status = true, isParent = false, parentId = 16 });
+            menu.Add(new Navbar { Id = 19, nameOption = "Basicos", imageClass = "fa fa-sitemap fa-fw", status = true, isParent = true, parentId = 0 });
+            menu.Add(new Navbar { Id = 20, nameOption = "Estado", controller = "Basico/Estado/Estados", action = "Index", status = true, isParent = false, parentId = 19 });
 
             return menu.ToList();
         }
