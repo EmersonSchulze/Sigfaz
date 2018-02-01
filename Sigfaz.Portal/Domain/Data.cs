@@ -10,25 +10,17 @@ namespace Sigfaz.Portal.Domain
         {
             var menu = new List<Navbar>();
             menu.Add(new Navbar { Id = 1, nameOption = "Dashboard", controller = "Home", action = "Index", imageClass = "fa fa-dashboard fa-fw", status = true, isParent = false, parentId = 0 });
-            menu.Add(new Navbar { Id = 2, nameOption = "Charts", imageClass = "fa fa-bar-chart-o fa-fw", status = true, isParent = true, parentId = 0 });
-            menu.Add(new Navbar { Id = 3, nameOption = "Flot Charts", controller = "Home", action = "FlotCharts", status = true, isParent = false, parentId = 2 });
-            menu.Add(new Navbar { Id = 4, nameOption = "Morris.js Charts", controller = "Home", action = "MorrisCharts", status = true, isParent = false, parentId = 2 });
-            menu.Add(new Navbar { Id = 5, nameOption = "Tables", controller = "Home", action = "Tables", imageClass = "fa fa-table fa-fw", status = true, isParent = false, parentId = 0 });
-            menu.Add(new Navbar { Id = 6, nameOption = "Forms", controller = "Home", action = "Forms", imageClass = "fa fa-edit fa-fw", status = true, isParent = false, parentId = 0 });
-            menu.Add(new Navbar { Id = 7, nameOption = "UI Elements", imageClass = "fa fa-wrench fa-fw", status = true, isParent = true, parentId = 0 });
-            menu.Add(new Navbar { Id = 8, nameOption = "Panels and Wells", controller = "Home", action = "Panels", status = true, isParent = false, parentId = 7 });
-            menu.Add(new Navbar { Id = 9, nameOption = "Buttons", controller = "Home", action = "Buttons", status = true, isParent = false, parentId = 7 });
-            menu.Add(new Navbar { Id = 10, nameOption = "Notifications", controller = "Home", action = "Notifications", status = true, isParent = false, parentId = 7 });
-            menu.Add(new Navbar { Id = 11, nameOption = "Typography", controller = "Home", action = "Typography", status = true, isParent = false, parentId = 7 });
-            menu.Add(new Navbar { Id = 12, nameOption = "Icons", controller = "Home", action = "Icons", status = true, isParent = false, parentId = 7 });
-            menu.Add(new Navbar { Id = 13, nameOption = "Grid", controller = "Home", action = "Grid", status = true, isParent = false, parentId = 7 });
-            menu.Add(new Navbar { Id = 14, nameOption = "Multi-Level Dropdown", imageClass = "fa fa-sitemap fa-fw", status = true, isParent = true, parentId = 0 });
-            menu.Add(new Navbar { Id = 15, nameOption = "Second Level Item", status = true, isParent = false, parentId = 14 });
-            menu.Add(new Navbar { Id = 16, nameOption = "Sample Pages", imageClass = "fa fa-files-o fa-fw", status = true, isParent = true, parentId = 0 });
-            menu.Add(new Navbar { Id = 17, nameOption = "Blank Page", controller = "Home", action = "Blank", status = true, isParent = false, parentId = 16 });
-            menu.Add(new Navbar { Id = 18, nameOption = "Login Page", controller = "Home", action = "Login", status = true, isParent = false, parentId = 16 });
-            menu.Add(new Navbar { Id = 19, nameOption = "Basicos", imageClass = "fa fa-sitemap fa-fw", status = true, isParent = true, parentId = 0 });
-            menu.Add(new Navbar { Id = 20, nameOption = "Estado", controller = "Basico/Estado/Estados", action = "Index", status = true, isParent = false, parentId = 19 });
+            menu.Add(new Navbar { Id = 2, nameOption = "Basicos", imageClass = "fa fa-sitemap fa-fw", status = true, isParent = true, parentId = 0 });
+            menu.Add(new Navbar { Id = 3, nameOption = "Estado", controller = "Basico/Estado/Estados", action = "Index", status = true, isParent = false, parentId = 2 });
+            menu.Add(new Navbar { Id = 4, nameOption = "Cidade", controller = "Basico/Cidade/Cidades", action = "Index", status = true, isParent = false, parentId = 2 });
+            menu.Add(new Navbar { Id = 5, nameOption = "Unidade de Medida", controller = "Basico/UnidadeMedida/UnidadeMedidas", action = "Index", status = true, isParent = false, parentId = 2 });
+            menu.Add(new Navbar { Id = 6, nameOption = "Classificação do Lote", controller = "Basico/ClassificacaoLote/ClassificacoesLotes", action = "Index", status = true, isParent = false, parentId = 2 });
+            menu.Add(new Navbar { Id = 7, nameOption = "Cultura", controller = "Basico/Cultura/Culturas", action = "Index", status = true, isParent = false, parentId = 2 });
+            menu.Add(new Navbar { Id = 8, nameOption = "Destino da Despesa", controller = "Basico/DestinoDespesa/DestinoDespesas", action = "Index", status = true, isParent = false, parentId = 2 });
+            menu.Add(new Navbar { Id = 9, nameOption = "Grupo", controller = "Basico/Grupo/Grupos", action = "Index", status = true, isParent = false, parentId = 2 });
+            menu.Add(new Navbar { Id = 10, nameOption = "Item de Manutenção", controller = "Basico/ItemManutencao/ItensManutencao", action = "Index", status = true, isParent = false, parentId = 2 });
+            menu.Add(new Navbar { Id = 11, nameOption = "Raca", controller = "Basico/Raca/Racas", action = "Index", status = true, isParent = false, parentId = 2 });
+            menu.Add(new Navbar { Id = 12, nameOption = "Sanidade", controller = "Basico/TipoSanidade/TipoSanidades", action = "Index", status = true, isParent = false, parentId = 2 });
 
             return menu.ToList();
         }

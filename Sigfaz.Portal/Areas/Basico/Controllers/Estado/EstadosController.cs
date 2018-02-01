@@ -33,13 +33,5 @@ namespace Sigfaz.Portal.Areas.Basico.Controllers.Estado
              
         }
 
-        // GET: Estado/Details/5
-        public ActionResult Detalhes(int id)
-        {
-            var estado = appService.BuscaId(id);
-            var estadoModel = mapper.Map<Dominio.Entidades.Estado, EstadoDetalheViewModel>(estado);
-            return View(estadoModel);
-        }
-
     }
 }

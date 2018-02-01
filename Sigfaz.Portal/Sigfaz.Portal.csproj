@@ -219,11 +219,9 @@
     <Compile Include="Areas\Basico\Controllers\Raca\RacasController.cs" />
     <Compile Include="Areas\Basico\Controllers\TipoSanidade\TipoSanidadesController.cs" />
     <Compile Include="Areas\Basico\Controllers\UnidadeMedida\UnidadeMedidasController.cs" />
-    <Compile Include="Areas\Basico\ViewModels\Cidade\CidadeDetalhesViewModel.cs" />
     <Compile Include="Areas\Basico\ViewModels\ClassificacaoLote\ClassificacaoLoteIndexViewModel.cs" />
     <Compile Include="Areas\Basico\ViewModels\Cultura\CulturaIndexViewModel.cs" />
     <Compile Include="Areas\Basico\ViewModels\DestinoDespesa\DestinoDespesaIndexViewModel.cs" />
-    <Compile Include="Areas\Basico\ViewModels\Estado\EstadoDetalheViewModel.cs" />
     <Compile Include="Areas\Basico\ViewModels\Grupo\GrupoIndexViewModel.cs" />
     <Compile Include="Areas\Basico\ViewModels\ItemManutencao\ItemManutencaoIndexViewModel.cs" />
     <Compile Include="Areas\Basico\ViewModels\Raca\RacaIndexViewModel.cs" />
@@ -251,6 +249,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\Basico\Views\Estados\Index.js" />
     <Content Include="bower_components\bootstrap-social\.gitignore" />
     <Content Include="bower_components\bootstrap-social\bootstrap-social.css" />
     <Content Include="bower_components\bootstrap\dist\css\bootstrap-theme.css" />
@@ -706,8 +705,6 @@
     <Content Include="Areas\Basico\Views\web.config" />
     <Content Include="Areas\Basico\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Basico\Views\Shared\_Layout.cshtml" />
-    <Content Include="Areas\Basico\Views\Cidades\Detalhes.cshtml" />
-    <Content Include="Areas\Basico\Views\Estados\Detalhes.cshtml" />
     <Content Include="Areas\Basico\Views\UnidadeMedidas\Index.cshtml" />
     <Content Include="Areas\Basico\Views\ClassificacaoLotes\Index.cshtml" />
     <Content Include="Areas\Basico\Views\Culturas\Index.cshtml" />

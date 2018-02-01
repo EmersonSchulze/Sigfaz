@@ -27,14 +27,5 @@ namespace Sigfaz.Portal.Areas.Basico.Controllers.Cidade
             return View(cidadeViewModel);
         }
 
-        // GET: Cidade/Details/5
-        public ActionResult Detalhes(int id)
-        {
-            var cidade = appService.BuscaId(id);
-            var cidadeModel = mapper.Map<Dominio.Entidades.Cidade, CidadeDetalheViewModel>(cidade);
-            return View(cidadeModel);
-        }
-
-       
     }
 }
