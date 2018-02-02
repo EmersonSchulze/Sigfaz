@@ -29,6 +29,11 @@ namespace Sigfaz.Dominio.Servicos
             return repository.BuscaTodos();
         }
 
+        public IEnumerable<TEntity> BuscaPrimeiros(int qtd)
+        {
+            return repository.BuscaPrimeiros(qtd);
+        }
+
         public void Dispose()
         {
             repository.Dispose();

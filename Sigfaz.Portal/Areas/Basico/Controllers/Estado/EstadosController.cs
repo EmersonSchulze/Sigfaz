@@ -6,6 +6,7 @@ using Sigfaz.Portal.AutoMapper;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
+using MvcBreadCrumbs;
 using Sigfaz.Portal.Controllers;
 using Sigfaz.Portal.Domain;
 
@@ -26,9 +27,8 @@ namespace Sigfaz.Portal.Areas.Basico.Controllers.Estado
         // GET: Estado
         public ActionResult Index()
         {
-            var data = new Data();
             var estadoViewModel = mapper.Map<IEnumerable<Dominio.Entidades.Estado>, IEnumerable<EstadoIndexViewModel>>(appService.BuscaTodos());
-            PartialView("_Navbar", data.navbarItems().ToList());
+            BreadCrumb.Add(Url.Action("Index", "Estados"), "Estado");
             return View(estadoViewModel);
              
         }

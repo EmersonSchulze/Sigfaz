@@ -85,6 +85,9 @@
     <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
     </Reference>
+    <Reference Include="MvcBreadCrumbs, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvcBreadCrumbs.0.69\lib\MvcBreadCrumbs.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=6.8.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.6.8.8\lib\net45\MySql.Data.dll</HintPath>
     </Reference>
@@ -249,7 +252,6 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Basico\Views\Estados\Index.js" />
     <Content Include="bower_components\bootstrap-social\.gitignore" />
     <Content Include="bower_components\bootstrap-social\bootstrap-social.css" />
     <Content Include="bower_components\bootstrap\dist\css\bootstrap-theme.css" />
@@ -597,7 +599,6 @@
     <Content Include="bower_components\jquery\src\manipulation\var\rcheckableType.js" />
     <Content Include="bower_components\jquery\src\manipulation\_evalUrl.js" />
     <Content Include="bower_components\jquery\src\offset.js" />
-    <Content Include="bower_components\jquery\src\outro.js" />
     <Content Include="bower_components\jquery\src\queue.js" />
     <Content Include="bower_components\jquery\src\queue\delay.js" />
     <Content Include="bower_components\jquery\src\selector-native.js" />
@@ -704,7 +705,6 @@
     <Content Include="Areas\Basico\Views\Estados\Index.cshtml" />
     <Content Include="Areas\Basico\Views\web.config" />
     <Content Include="Areas\Basico\Views\_ViewStart.cshtml" />
-    <Content Include="Areas\Basico\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Basico\Views\UnidadeMedidas\Index.cshtml" />
     <Content Include="Areas\Basico\Views\ClassificacaoLotes\Index.cshtml" />
     <Content Include="Areas\Basico\Views\Culturas\Index.cshtml" />
@@ -1035,6 +1035,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\globalize\cultures\globalize.culture.pt-BR.js" />
+    <Content Include="Scripts\globalize\cultures\globalize.cultures.js" />
+    <Content Include="Scripts\globalize\globalize.js" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\flot-data.js" />

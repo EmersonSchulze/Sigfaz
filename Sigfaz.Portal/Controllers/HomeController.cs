@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using MvcBreadCrumbs;
 
 namespace Sigfaz.Portal.Controllers
 {
@@ -6,6 +7,7 @@ namespace Sigfaz.Portal.Controllers
     {
         public ActionResult Index()
         {
+            BreadCrumb.Add(Url.Action("Index", "Home"), "Home");
             return View();
         }
 

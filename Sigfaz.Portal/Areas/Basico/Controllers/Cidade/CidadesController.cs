@@ -3,7 +3,9 @@ using Sigfaz.Aplicacao.Interfaces.Especializadas;
 using Sigfaz.Portal.Areas.Basico.ViewModels.Cidade;
 using Sigfaz.Portal.AutoMapper;
 using System.Collections.Generic;
+using System.Linq;
 using System.Web.Mvc;
+using MvcBreadCrumbs;
 
 namespace Sigfaz.Portal.Areas.Basico.Controllers.Cidade
 {
@@ -20,12 +22,14 @@ namespace Sigfaz.Portal.Areas.Basico.Controllers.Cidade
 
         }
 
-        // GET: Cidade
+
+        //GET: Cidade
         public ActionResult Index()
-        {
-            var cidadeViewModel = mapper.Map<IEnumerable<Dominio.Entidades.Cidade>, IEnumerable<CidadeIndexViewModel>>(appService.BuscaTodos());
-            return View(cidadeViewModel);
-        }
+            {
+                var cidadeViewModel = mapper.Map<IEnumerable<Dominio.Entidades.Cidade>, IEnumerable<CidadeIndexViewModel>>(appService.BuscaPrimeiros(25));
+                BreadCrumb.Add(Url.Action("Index", "Cidades"), "Cidade");
+                return View(cidadeViewModel);
+            }
 
     }
 }

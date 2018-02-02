@@ -2,6 +2,7 @@
 using Sigfaz.Dominio.Interfaces.Servicos;
 using System;
 using System.Collections.Generic;
+using Sigfaz.Dominio.Entidades;
 
 namespace Sigfaz.Aplicacao
 {
@@ -25,6 +26,11 @@ namespace Sigfaz.Aplicacao
         }
 
         public IEnumerable<TEntity> BuscaTodos()
+        {
+            return serviceBase.BuscaTodos();
+        }
+
+        public IEnumerable<TEntity> BuscaPrimeiros(int qtd)
         {
             return serviceBase.BuscaTodos();
         }

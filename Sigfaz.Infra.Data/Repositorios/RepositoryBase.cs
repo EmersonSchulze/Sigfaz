@@ -28,6 +28,11 @@ namespace Sigfaz.Infra.Data.Repositorios
             return Bd.Set<TEntity>().ToList();
         }
 
+        public IEnumerable<TEntity> BuscaPrimeiros(int qtd)
+        {
+            return Bd.Set<TEntity>().Take(qtd).AsEnumerable();
+        }
+
         public void Dispose()
         {
            
