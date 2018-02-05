@@ -9,16 +9,16 @@ using MvcBreadCrumbs;
 
 namespace Sigfaz.Portal.Areas.Basico.Controllers.Cidade
 {
-   // [Authorize(Roles = "Administrador,")]
+    [Authorize(Roles = "Administrador")]
     public class CidadesController : Controller
     {
-        private readonly ICidadeAppService appService;
-        private readonly IMapper mapper;
+        private readonly ICidadeAppService _appService;
+        private readonly IMapper _mapper;
 
         public CidadesController(ICidadeAppService repositorio)
         {
-            this.appService = repositorio;
-            mapper = AutoMapperConfig.Mapper;
+            this._appService = repositorio;
+            _mapper = AutoMapperConfig.Mapper;
 
         }
 
@@ -26,8 +26,8 @@ namespace Sigfaz.Portal.Areas.Basico.Controllers.Cidade
         //GET: Cidade
         public ActionResult Index()
             {
-                var cidadeViewModel = mapper.Map<IEnumerable<Dominio.Entidades.Cidade>, IEnumerable<CidadeIndexViewModel>>(appService.BuscaPrimeiros(25));
-                BreadCrumb.Add(Url.Action("Index", "Cidades"), "Cidade");
+                var cidadeViewModel = _mapper.Map<IEnumerable<Dominio.Entidades.Cidade>, IEnumerable<CidadeIndexViewModel>>(_appService.BuscaTodos());
+                BreadCrumb.Add(Url.Action("Index", "Cidades", "Cidade_Default"), "Cidade");
                 return View(cidadeViewModel);
             }
 

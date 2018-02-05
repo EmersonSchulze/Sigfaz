@@ -6,11 +6,11 @@ namespace Sigfaz.Aplicacao.Especializadas
 {
     public class UnidadeMedidaAppService : AppServiceBase<UnidadeMedida>, IUnidadeMedidaAppService
     {
-        private readonly IUnidadeMedidaService unidadeApp;
+        private readonly IUnidadeMedidaService _unidadeApp;
 
         public UnidadeMedidaAppService(IUnidadeMedidaService service) : base(service)
         {
-            unidadeApp = service;
+            _unidadeApp = service;
         }
     }
 }

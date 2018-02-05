@@ -1,13 +1,15 @@
 ﻿using System.Web.Mvc;
 using MvcBreadCrumbs;
+using Sigfaz.Portal.Areas.Basico.ViewModels.Estado;
 
 namespace Sigfaz.Portal.Controllers
 {
     public class HomeController : Controller
     {
+
         public ActionResult Index()
         {
-            BreadCrumb.Add(Url.Action("Index", "Home"), "Home");
+            BreadCrumb.Add(Url.Action("Index", "Home", "Default"), "Sigfaz");
             return View();
         }
 

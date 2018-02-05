@@ -9,20 +9,20 @@ namespace Sigfaz.Portal.Areas.Basico.Controllers.Raca
 {
     public class RacasController : Controller
     {
-        private readonly IRacaAppService appService;
-        private readonly IMapper mapper;
+        private readonly IRacaAppService _appService;
+        private readonly IMapper _mapper;
 
         public RacasController(IRacaAppService repositorio)
         {
-            this.appService = repositorio;
-            mapper = AutoMapperConfig.Mapper;
+            this._appService = repositorio;
+            _mapper = AutoMapperConfig.Mapper;
 
         }
 
         // GET: Cidade
         public ActionResult Index()
         {
-            var racaViewModel = mapper.Map<IEnumerable<Dominio.Entidades.Raca>, IEnumerable<RacaIndexViewModel>>(appService.BuscaTodos());
+            var racaViewModel = _mapper.Map<IEnumerable<Dominio.Entidades.Raca>, IEnumerable<RacaIndexViewModel>>(_appService.BuscaTodos());
             return View(racaViewModel);
         }
 

@@ -9,20 +9,20 @@ namespace Sigfaz.Portal.Areas.Basico.Controllers.Estado
 {
     public class UnidadeMedidasController : System.Web.Mvc.Controller
     {
-        private readonly IUnidadeMedidaAppService appService;
-        private readonly IMapper mapper;
+        private readonly IUnidadeMedidaAppService _appService;
+        private readonly IMapper _mapper;
 
 
         public UnidadeMedidasController(IUnidadeMedidaAppService repositorio)
         {
-           this.appService = repositorio;
-            mapper = AutoMapperConfig.Mapper;
+           this._appService = repositorio;
+            _mapper = AutoMapperConfig.Mapper;
         }
 
         // GET: Estado
         public ActionResult Index()
         {
-            var unidadeViewModel = mapper.Map<IEnumerable<Dominio.Entidades.UnidadeMedida>, IEnumerable<UnidadeMedidaIndexViewModel>>(appService.BuscaTodos());
+            var unidadeViewModel = _mapper.Map<IEnumerable<Dominio.Entidades.UnidadeMedida>, IEnumerable<UnidadeMedidaIndexViewModel>>(_appService.BuscaTodos());
             return View(unidadeViewModel);
         }
 

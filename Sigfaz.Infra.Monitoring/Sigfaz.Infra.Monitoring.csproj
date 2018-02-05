@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5971C6E3-F0AD-478F-932A-4718E3BD2F69}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sigfaz.Infra.Monitoring</RootNamespace>
+    <AssemblyName>Sigfaz.Infra.Monitoring</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IMonitoramentoProcessoProvider.cs" />
+    <Compile Include="Performance\Entidades\Mappings\RegistroMonitoramentoMapping.cs" />
+    <Compile Include="Performance\Entidades\RegistroMonitoramento.cs" />
+    <Compile Include="Performance\Entidades\RegistroMonitoramento_Impl.cs" />
+    <Compile Include="Performance\MonitoramentoPerformance.cs" />
+    <Compile Include="Performance\Procedure\BSSISMONITOR.cs" />
+    <Compile Include="Processos\Entidades\Mappings\MensagemRegistroProcessoMapping.cs" />
+    <Compile Include="Processos\Entidades\Mappings\RegistroProcessoMapping.cs" />
+    <Compile Include="Processos\Entidades\MensagemRegistroProcesso.cs" />
+    <Compile Include="Processos\Entidades\MensagemRegistroProcesso_Impl.cs" />
+    <Compile Include="Processos\Entidades\RegistroProcesso.cs" />
+    <Compile Include="Processos\Entidades\RegistroProcesso_Impl.cs" />
+    <Compile Include="Processos\Enum\SituacaoMonitoramento.cs" />
+    <Compile Include="Processos\MonitoramentoProcesso.cs" />
+    <Compile Include="Processos\MonitoramentoProcessoHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

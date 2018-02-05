@@ -7,46 +7,46 @@ namespace Sigfaz.Dominio.Servicos
 {
     public class ServiceBase<TEntity> : IDisposable, IServiceBase<TEntity> where TEntity : class
     {
-        private readonly IRepositoryBase<TEntity> repository;
+        private readonly IRepositoryBase<TEntity> _repository;
 
-        public ServiceBase(IRepositoryBase<TEntity> _repository)
+        public ServiceBase(IRepositoryBase<TEntity> repository)
         {
-            repository = _repository;
+            this._repository = repository;
         }
 
         public void Atualizar(TEntity obj)
         {
-            repository.Atualizar(obj);
+            _repository.Atualizar(obj);
         }
 
         public TEntity BuscaId(int id)
         {
-            return repository.BuscaId(id);
+            return _repository.BuscaId(id);
         }
 
         public IEnumerable<TEntity> BuscaTodos()
         {
-            return repository.BuscaTodos();
+            return _repository.BuscaTodos();
         }
 
         public IEnumerable<TEntity> BuscaPrimeiros(int qtd)
         {
-            return repository.BuscaPrimeiros(qtd);
+            return _repository.BuscaPrimeiros(qtd);
         }
 
         public void Dispose()
         {
-            repository.Dispose();
+            _repository.Dispose();
         }
 
         public void Incluir(TEntity obj)
         {
-            repository.Incluir(obj);
+            _repository.Incluir(obj);
         }
 
         public void Remover(TEntity obj)
         {
-            repository.Remover(obj);
+            _repository.Remover(obj);
         }
     }
 }

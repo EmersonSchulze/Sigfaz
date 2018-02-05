@@ -6,11 +6,11 @@ namespace Sigfaz.Aplicacao.Especializadas
 {
     public class TipoSanidadeAppService : AppServiceBase<TipoSanidade>, ITipoSanidadeAppService
     {
-        private readonly ITipoSanidadeService tipoApp;
+        private readonly ITipoSanidadeService _tipoApp;
 
         public TipoSanidadeAppService(ITipoSanidadeService service) : base(service)
         {
-            tipoApp = service;
+            _tipoApp = service;
         }
     }
 }

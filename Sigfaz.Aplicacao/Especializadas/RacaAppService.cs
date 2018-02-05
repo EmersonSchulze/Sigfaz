@@ -6,11 +6,11 @@ namespace Sigfaz.Aplicacao.Especializadas
 {
     public class RacaAppService : AppServiceBase<Raca>, IRacaAppService
     {
-        private readonly IRacaService racaApp;
+        private readonly IRacaService _racaApp;
 
         public RacaAppService(IRacaService service) : base(service)
         {
-            racaApp = service;
+            _racaApp = service;
         }
     }
 }

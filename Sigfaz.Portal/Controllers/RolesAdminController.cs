@@ -24,17 +24,7 @@ namespace Sigfaz.Portal.Controllers
         }
 
 
-        private async Task PopulateRoles()
-        {
-            var roles = new[] { "A", "B", "C", "D" };
-
-            foreach (string role in roles)
-            {
-                await _roleManager.CreateAsync(new IdentityRole(role));
-            }
-        }
-        //
-        // GET: /Roles/
+       // GET: /Roles/
         public ActionResult Index()
         {
 

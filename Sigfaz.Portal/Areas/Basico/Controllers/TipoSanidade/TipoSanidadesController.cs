@@ -9,20 +9,20 @@ namespace Sigfaz.Portal.Areas.Basico.Controllers.TipoSanidade
 {
     public class TipoSanidadesController : Controller
     {
-        private readonly ITipoSanidadeAppService appService;
-        private readonly IMapper mapper;
+        private readonly ITipoSanidadeAppService _appService;
+        private readonly IMapper _mapper;
 
         public TipoSanidadesController(ITipoSanidadeAppService repositorio)
         {
-            this.appService = repositorio;
-            mapper = AutoMapperConfig.Mapper;
+            this._appService = repositorio;
+            _mapper = AutoMapperConfig.Mapper;
 
         }
 
         // GET: Cidade
         public ActionResult Index()
         {
-            var sanidadeViewModel = mapper.Map<IEnumerable<Dominio.Entidades.TipoSanidade>, IEnumerable<TipoSanidadeIndexViewModel>>(appService.BuscaTodos());
+            var sanidadeViewModel = _mapper.Map<IEnumerable<Dominio.Entidades.TipoSanidade>, IEnumerable<TipoSanidadeIndexViewModel>>(_appService.BuscaTodos());
             return View(sanidadeViewModel);
         }
 

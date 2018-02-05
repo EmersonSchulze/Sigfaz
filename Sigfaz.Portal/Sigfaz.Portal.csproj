@@ -224,6 +224,7 @@
     <Compile Include="Areas\Basico\Controllers\UnidadeMedida\UnidadeMedidasController.cs" />
     <Compile Include="Areas\Basico\ViewModels\ClassificacaoLote\ClassificacaoLoteIndexViewModel.cs" />
     <Compile Include="Areas\Basico\ViewModels\Cultura\CulturaIndexViewModel.cs" />
+    <Compile Include="Areas\Basico\ViewModels\Cultura\CulturaViewModel.cs" />
     <Compile Include="Areas\Basico\ViewModels\DestinoDespesa\DestinoDespesaIndexViewModel.cs" />
     <Compile Include="Areas\Basico\ViewModels\Grupo\GrupoIndexViewModel.cs" />
     <Compile Include="Areas\Basico\ViewModels\ItemManutencao\ItemManutencaoIndexViewModel.cs" />
@@ -240,6 +241,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\NavbarController.cs" />
     <Compile Include="Controllers\RolesAdminController.cs" />
+    <Compile Include="Controllers\UserAdminController.cs" />
     <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="Domain\Data.cs" />
     <Compile Include="Global.asax.cs">
@@ -1136,6 +1138,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\UserAdmin\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -1149,6 +1152,10 @@
       <Project>{15A359F4-A4D4-4F80-A3AB-9FABF0CED688}</Project>
       <Name>Sigfaz.Dominio</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Sigfaz.Infra.ComponentModel\Sigfaz.Infra.ComponentModel.csproj">
+      <Project>{9665FEE5-D880-4A95-9D89-12676E32506D}</Project>
+      <Name>Sigfaz.Infra.ComponentModel</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Sigfaz.Infra.CrossCutting.Identity\Sigfaz.Infra.CrossCutting.Identity.csproj">
       <Project>{9062B1C5-F32D-435E-93B2-2E7F6268B2A1}</Project>
       <Name>Sigfaz.Infra.CrossCutting.Identity</Name>
@@ -1160,6 +1167,14 @@
     <ProjectReference Include="..\Sigfaz.Infra.Data\Sigfaz.Infra.Data.csproj">
       <Project>{704E9056-8C07-4BB7-9079-80387B8E0B9B}</Project>
       <Name>Sigfaz.Infra.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sigfaz.Infra.Mvc\Sigfaz.Infra.Mvc.csproj">
+      <Project>{61a52a60-e1bb-4814-8750-d28f5c74448b}</Project>
+      <Name>Sigfaz.Infra.Mvc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sigfaz.Infra\Sigfaz.Infra.csproj">
+      <Project>{ed30a68c-8dfe-4a28-9977-3e76f8fc758e}</Project>
+      <Name>Sigfaz.Infra</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

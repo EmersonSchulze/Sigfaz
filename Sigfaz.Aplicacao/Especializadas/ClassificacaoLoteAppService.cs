@@ -6,11 +6,11 @@ namespace Sigfaz.Aplicacao.Especializadas
 {
     public class ClassificacaoLoteAppService : AppServiceBase<ClassificacaoLote>, IClassificacaoLoteAppService
     {
-        private readonly IClassificacaoLoteService classLoteApp;
+        private readonly IClassificacaoLoteService _classLoteApp;
 
         public ClassificacaoLoteAppService(IClassificacaoLoteService service) : base(service)
         {
-            classLoteApp = service;
+            _classLoteApp = service;
         }
     }
 }

@@ -6,11 +6,11 @@ namespace Sigfaz.Dominio.Servicos
 {
     public class CulturaService : ServiceBase<Cultura>, ICulturaService
     {
-        private readonly ICulturaRepository repository;
+        private readonly ICulturaRepository _repository;
 
         public CulturaService(ICulturaRepository culturaRepository) : base(culturaRepository)
         {
-            repository = culturaRepository;
+            _repository = culturaRepository;
         }
     }
 }

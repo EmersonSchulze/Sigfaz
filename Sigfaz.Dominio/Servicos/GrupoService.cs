@@ -6,11 +6,11 @@ namespace Sigfaz.Dominio.Servicos
 {
     public class GrupoService : ServiceBase<Grupo>, IGrupoService
     {
-        private readonly IGrupoRepository repository;
+        private readonly IGrupoRepository _repository;
 
         public GrupoService(IGrupoRepository grupoRepository) : base(grupoRepository)
         {
-            repository = grupoRepository;
+            _repository = grupoRepository;
         }
     }
 }

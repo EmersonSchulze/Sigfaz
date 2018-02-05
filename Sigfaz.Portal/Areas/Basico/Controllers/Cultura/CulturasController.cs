@@ -1,28 +1,36 @@
 ﻿using AutoMapper;
 using Sigfaz.Aplicacao.Interfaces.Especializadas;
-using Sigfaz.Portal.Areas.Basico.ViewModels.Cultura;
 using Sigfaz.Portal.AutoMapper;
 using System.Collections.Generic;
+using System.Security.Policy;
 using System.Web.Mvc;
+using MvcBreadCrumbs;
+using Sigfaz.Infra.Mvc;
+using Sigfaz.Portal.Areas.Basico.ViewModels.Cultura;
 
 namespace Sigfaz.Portal.Areas.Basico.Controllers.Cultura
 {
+    [Authorize(Roles = "Administrador")]
     public class CulturasController : Controller
     {
-        private readonly ICulturaAppService appService;
-        private readonly IMapper mapper;
+
+        private readonly ICulturaAppService _appService;
+        private readonly IMapper _mapper;
 
         public CulturasController(ICulturaAppService repositorio)
         {
-            this.appService = repositorio;
-            mapper = AutoMapperConfig.Mapper;
+            this._appService = repositorio;
+            _mapper = AutoMapperConfig.Mapper;
 
         }
+
 
         // GET: Cidade
         public ActionResult Index()
         {
-            var culturaViewModel = mapper.Map<IEnumerable<Dominio.Entidades.Cultura>, IEnumerable<CulturaIndexViewModel>>(appService.BuscaTodos());
+            BreadCrumb.Add(Url.Action("Index", "Culturas", "Cultura_Default"), "Cultura");
+            var culturaViewModel = _mapper.Map<IEnumerable<Dominio.Entidades.Cultura>, IEnumerable<CulturaIndexViewModel>>(_appService.BuscaTodos());
+           
             return View(culturaViewModel);
         }
 

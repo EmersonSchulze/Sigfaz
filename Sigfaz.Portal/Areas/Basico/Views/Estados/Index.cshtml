@@ -15,33 +15,33 @@
 
                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                     <thead>
-                        <tr>
-                            <th>
-                                @Html.DisplayNameFor(model => model.Nome)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.Sigla)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.CodigoIbge)
-                            </th>
-                        </tr>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Nome)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Sigla)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.CodigoIbge)
+                        </th>
+                    </tr>
                     </thead>
                     <tbody>
-                        @foreach (var item in Model)
-                        {
-                            <tr>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Nome)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Sigla)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.CodigoIbge)
-                                </td>
-                            </tr>
-                        }
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Nome)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Sigla)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.CodigoIbge)
+                            </td>
+                        </tr>
+                    }
                     </tbody>
                 </table>
             </div>

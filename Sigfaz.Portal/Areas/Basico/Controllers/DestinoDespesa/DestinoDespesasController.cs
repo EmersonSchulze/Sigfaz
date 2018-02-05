@@ -9,20 +9,20 @@ namespace Sigfaz.Portal.Areas.Basico.Controllers.DestinoDespesa
 {
     public class DestinoDespesasController : Controller
     {
-        private readonly IDestinoDespesaAppService appService;
-        private readonly IMapper mapper;
+        private readonly IDestinoDespesaAppService _appService;
+        private readonly IMapper _mapper;
 
         public DestinoDespesasController(IDestinoDespesaAppService repositorio)
         {
-            this.appService = repositorio;
-            mapper = AutoMapperConfig.Mapper;
+            this._appService = repositorio;
+            _mapper = AutoMapperConfig.Mapper;
 
         }
 
         // GET: Cidade
         public ActionResult Index()
         {
-            var despesaViewModel = mapper.Map<IEnumerable<Dominio.Entidades.DestinoDespesa>, IEnumerable<DestinoDespesaIndexViewModel>>(appService.BuscaTodos());
+            var despesaViewModel = _mapper.Map<IEnumerable<Dominio.Entidades.DestinoDespesa>, IEnumerable<DestinoDespesaIndexViewModel>>(_appService.BuscaTodos());
             return View(despesaViewModel);
         }
 
