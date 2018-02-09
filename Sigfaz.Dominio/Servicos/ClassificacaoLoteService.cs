@@ -6,11 +6,11 @@ namespace Sigfaz.Dominio.Servicos
 {
     public class ClassificacaoLoteService : ServiceBase<ClassificacaoLote>, IClassificacaoLoteService
     {
-        private readonly IClassificacaoLoteRepository repository;
+        private readonly IClassificacaoLoteRepository _repository;
 
         public ClassificacaoLoteService(IClassificacaoLoteRepository classificacaoRepository) : base(classificacaoRepository)
         {
-            repository = classificacaoRepository;
+            _repository = classificacaoRepository;
         }
     }
 }

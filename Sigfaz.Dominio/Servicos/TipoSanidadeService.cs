@@ -6,11 +6,11 @@ namespace Sigfaz.Dominio.Servicos
 {
     public class TipoSanidadeService : ServiceBase<TipoSanidade>, ITipoSanidadeService
     {
-        private readonly ITipoSanidadeRepository repository;
+        private readonly ITipoSanidadeRepository _repository;
 
         public TipoSanidadeService(ITipoSanidadeRepository tSanidadeRepository) : base(tSanidadeRepository)
         {
-            repository = tSanidadeRepository;
+            _repository = tSanidadeRepository;
         }
     }
 }

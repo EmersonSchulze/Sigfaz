@@ -6,11 +6,11 @@ namespace Sigfaz.Dominio.Servicos
 {
     public class UnidadeMedidaService : ServiceBase<UnidadeMedida>, IUnidadeMedidaService
     {
-        private readonly IUnidadeMedidaRepository repository;
+        private readonly IUnidadeMedidaRepository _repository;
 
         public UnidadeMedidaService(IUnidadeMedidaRepository unidadeRepository) : base(unidadeRepository)
         {
-            repository = unidadeRepository;
+            _repository = unidadeRepository;
         }
     }
 }

@@ -9,20 +9,20 @@ namespace Sigfaz.Portal.Areas.Basico.Controllers.Grupo
 {
     public class GruposController : Controller
     {
-        private readonly IGrupoAppService appService;
-        private readonly IMapper mapper;
+        private readonly IGrupoAppService _appService;
+        private readonly IMapper _mapper;
 
         public GruposController(IGrupoAppService repositorio)
         {
-            this.appService = repositorio;
-            mapper = AutoMapperConfig.Mapper;
+            this._appService = repositorio;
+            _mapper = AutoMapperConfig.Mapper;
 
         }
 
         // GET: Cidade
         public ActionResult Index()
         {
-            var grupoViewModel = mapper.Map<IEnumerable<Dominio.Entidades.Grupo>, IEnumerable<GrupoIndexViewModel>>(appService.BuscaTodos());
+            var grupoViewModel = _mapper.Map<IEnumerable<Dominio.Entidades.Grupo>, IEnumerable<GrupoIndexViewModel>>(_appService.BuscaTodos());
             return View(grupoViewModel);
         }
 

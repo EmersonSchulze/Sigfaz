@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace Sigfaz.Portal.Areas.Basico.ViewModels.Cultura
@@ -16,6 +17,8 @@ namespace Sigfaz.Portal.Areas.Basico.ViewModels.Cultura
         [DisplayName("Apresentavel")]
         public string Apelido { get; set; }
 
-       
+        public IEnumerable<CulturaViewModel> ResultadoPesquisa { get; set; }
+
+
     }
 }

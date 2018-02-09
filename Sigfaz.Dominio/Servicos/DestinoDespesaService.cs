@@ -6,11 +6,11 @@ namespace Sigfaz.Dominio.Servicos
 {
     public class DestinoDespesaService : ServiceBase<DestinoDespesa>, IDestinoDespesaService
     {
-        private readonly IDestinoDespesaRepository repository;
+        private readonly IDestinoDespesaRepository _repository;
 
         public DestinoDespesaService(IDestinoDespesaRepository destinoRepository) : base(destinoRepository)
         {
-            repository = destinoRepository;
+            _repository = destinoRepository;
         }
     }
 }

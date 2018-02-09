@@ -7,16 +7,16 @@ namespace Sigfaz.Aplicacao.Especializadas
 {
     public class CidadeAppService : AppServiceBase<Cidade>, ICidadeAppService
     {
-        private readonly ICidadeService cidadeApp;
+        private readonly ICidadeService _cidadeApp;
 
         public CidadeAppService(ICidadeService service) : base(service)
         {
-            cidadeApp = service;
+            _cidadeApp = service;
         }
 
         public IEnumerable<Cidade> BuscarPorEstado(string descricao)
         {
-            return cidadeApp.BuscarPorEstado(descricao);
+            return _cidadeApp.BuscarPorEstado(descricao);
         }
     }
 }

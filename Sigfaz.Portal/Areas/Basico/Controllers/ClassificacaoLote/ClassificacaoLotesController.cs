@@ -9,27 +9,27 @@ namespace Sigfaz.Portal.Areas.Basico.Controllers.ClassificacaoLote
 {
     public class ClassificacaoLotesController : Controller
     {
-        private readonly IClassificacaoLoteAppService appService;
-        private readonly IMapper mapper;
+        private readonly IClassificacaoLoteAppService _appService;
+        private readonly IMapper _mapper;
 
         public ClassificacaoLotesController(IClassificacaoLoteAppService repositorio)
         {
-            this.appService = repositorio;
-            mapper = AutoMapperConfig.Mapper;
+            this._appService = repositorio;
+            _mapper = AutoMapperConfig.Mapper;
 
         }
         // GET: Basico/ClassificacaoLotes
         public ActionResult Index()
         {
-            var loteViewModel = mapper.Map<IEnumerable<Dominio.Entidades.ClassificacaoLote>, IEnumerable<ClassificacaoLoteIndexViewModel>>(appService.BuscaTodos());
+            var loteViewModel = _mapper.Map<IEnumerable<Dominio.Entidades.ClassificacaoLote>, IEnumerable<ClassificacaoLoteIndexViewModel>>(_appService.BuscaTodos());
             return View(loteViewModel);
         }
 
         // GET: Basico/ClassificacaoLotes/Details/5
         public ActionResult Detalhes(int id)
         {
-            var lote = appService.BuscaId(id);
-            var loteModel = mapper.Map<Dominio.Entidades.ClassificacaoLote, ClassificacaoLoteIndexViewModel>(lote);
+            var lote = _appService.BuscaId(id);
+            var loteModel = _mapper.Map<Dominio.Entidades.ClassificacaoLote, ClassificacaoLoteIndexViewModel>(lote);
             return View(loteModel);
         }
 

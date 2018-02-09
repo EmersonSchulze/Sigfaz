@@ -1,43 +1,115 @@
-﻿<!DOCTYPE html>
-<html>
+﻿@using MvcBreadCrumbs
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Identity Isolation</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Sigfaz</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <!-- DataTables CSS -->
+    <link href="@Url.Content("~/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css")" rel="stylesheet" type="text/css" />
+    <!-- DataTables Responsive CSS -->
+    <link href="@Url.Content("~/bower_components/datatables-responsive/css/dataTables.responsive.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/bower_components/morrisjs/morris.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/bower_components/font-awesome/css/font-awesome.min.css")" rel="stylesheet" type="text/css" />
+    <!-- jQuery -->
+    @Scripts.Render("~/bundles/jquery")
+    <script src="@Url.Content("~/bower_components/jquery/dist/jquery.min.js")"></script>
+    <script src="~/Scripts/globalize/globalize.js"></script>
+    <script src="~/Scripts/globalize/cultures/globalize.culture.pt-BR.js"></script>
 
+    @Scripts.Render("~/bundles/bootstrap")
+    <script src="@Url.Content("~/bower_components/metisMenu/dist/metisMenu.min.js")"></script>
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Emerson Schulze", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Lista Usuários","Index","Usuarios")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
-        </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>Sigfaz - Sistema Gerenciador de Fazendas</p>
-            <p>&copy;Direitos reservados @DateTime.Now.Year - Emerson Schulze</p>
-        </footer>
-    </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+<div id="wrapper">
+    <!-- Navigation -->
+    @Html.Action("Index", "Navbar", new {area = string.Empty})
+   
+    <div class="navbar-header">
+
+
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>  
+       
+        @Html.ActionLink("Sigfaz", "Index", "Home", null, new { @class = "navbar-brand" })
+       
+    </div>
+    <div id="page-wrapper">
+        <ul>
+            <li>
+                @Html.Raw(BreadCrumb.DisplayRaw())
+            </li>
+        </ul>
+        @RenderBody()
+
+    </div>
+    <footer>  
+        <div class="content-wrapper">  
+            <div class="float-left">  
+                @Html.Partial("_Footer")  
+            </div>  
+        </div>  
+    </footer> 
+    <!-- /#page-wrapper -->
+</div>
+<!-- /#wrapper -->
+<!-- DataTables JavaScript -->
+<script src="@Url.Content("~/bower_components/raphael/raphael-min.js")"></script>
+
+<!-- DataTables JavaScript -->
+<script src="@Url.Content("~/bower_components/datatables/media/js/jquery.dataTables.min.js")"></script>
+<script src="@Url.Content("~/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js")"></script>
+<!-- Custom Theme JavaScript -->
+<script src="@Url.Content("~/Scripts/sb-admin-2.js")"></script>
+<!-- Page-Level Demo Scripts - Tables - Use for reference -->
+<script>
+    $(document).ready(function() {
+        $('#dataTables-example').DataTable({
+            responsive: true,
+            "language": {
+                //"url": "bower_components/datatables-plugins/i18n/Portuguese-Brasil.lang"
+                "url": "//cdn.datatables.net/plug-ins/1.10.12/i18n/Portuguese-Brasil.json"
+            }            
+        });
+    });
+
+
+    $.validator.methods.number = function (value, element) {
+        var val = Globalize.parseFloat(value);
+        return this.optional(element) ||
+            (val);
+    }
+
+    $.validator.methods.date = function (value, element) {
+        var val = Globalize.parseDate(value);
+        return this.optional(element) ||
+            (val);
+    }
+
+    $(function () {
+
+        Globalize.culture('pt-BR');
+
+        jQuery.extend(jQuery.validator.methods, {
+            range: function (value, element, param) {
+                //Use the Globalization plugin to parse the value        
+                var val = Globalize.parseFloat(value);
+                return this.optional(element) || (
+                    val >= param[0] && val <= param[1]);
+            }
+        });
+
+    });
+</script>
+@RenderSection("scripts", required: false)
 </body>
 </html>

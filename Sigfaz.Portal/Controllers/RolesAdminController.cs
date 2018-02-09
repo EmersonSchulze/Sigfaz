@@ -7,6 +7,7 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using System.Web.Mvc;
+using MvcBreadCrumbs;
 
 namespace Sigfaz.Portal.Controllers
 {
@@ -24,28 +25,19 @@ namespace Sigfaz.Portal.Controllers
         }
 
 
-        private async Task PopulateRoles()
-        {
-            var roles = new[] { "A", "B", "C", "D" };
-
-            foreach (string role in roles)
-            {
-                await _roleManager.CreateAsync(new IdentityRole(role));
-            }
-        }
-        //
-        // GET: /Roles/
+       // GET: /Roles/
         public ActionResult Index()
         {
+            BreadCrumb.Add(Url.Action("Index"), "Regras");
 
-          
-           return View(_roleManager.Roles);
+            return View(_roleManager.Roles);
         }
 
         //
         // GET: /Roles/Details/5
         public async Task<ActionResult> Details(string id)
         {
+            BreadCrumb.Add(Url.Action("Index"), "Regras/Detalhes");
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);

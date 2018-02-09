@@ -23,12 +23,11 @@ namespace Sigfaz.Portal.AutoMapper
 
             #region Cadastros Basicos
             CreateMap<EstadoIndexViewModel, Estado>();
-            CreateMap<EstadoDetalheViewModel, Estado>();
-            CreateMap<CidadeDetalheViewModel, Cidade>();
             CreateMap<CidadeIndexViewModel, Cidade>();
             CreateMap<UnidadeMedidaIndexViewModel, UnidadeMedida>();
             CreateMap<ClassificacaoLoteIndexViewModel, ClassificacaoLote>();
             CreateMap<CulturaIndexViewModel, Cultura>();
+            CreateMap<CulturaViewModel, Cultura>();
             CreateMap<DestinoDespesaIndexViewModel, DestinoDespesa>();
             CreateMap<GrupoIndexViewModel, Grupo>();
             CreateMap<ItemManutencaoIndexViewModel, ItemManutencao>();

@@ -8,11 +8,11 @@ namespace Sigfaz.Infra.CrossCutting.Identity.Model
         public string Provider { get; set; }
 
         [Required]
-        [Display(Name = "Code")]
+        [Display(Name = "Codigo")]
         public string Code { get; set; }
         public string ReturnUrl { get; set; }
 
-        [Display(Name = "Remember this browser?")]
+        [Display(Name = "Lembrar-me Nesta Navegador")]
         public bool RememberBrowser { get; set; }
 
         public bool RememberMe { get; set; }

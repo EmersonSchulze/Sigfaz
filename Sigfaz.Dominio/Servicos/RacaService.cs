@@ -6,11 +6,11 @@ namespace Sigfaz.Dominio.Servicos
 {
     public class RacaService : ServiceBase<Raca>, IRacaService
     {
-        private readonly IRacaRepository repository;
+        private readonly IRacaRepository _repository;
 
         public RacaService(IRacaRepository racaRepository) : base(racaRepository)
         {
-            repository = racaRepository;
+            _repository = racaRepository;
         }
     }
 }

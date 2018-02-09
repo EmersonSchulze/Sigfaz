@@ -6,11 +6,11 @@ namespace Sigfaz.Aplicacao.Especializadas
 {
     public class DestinoDespesaAppService : AppServiceBase<DestinoDespesa>, IDestinoDespesaAppService
     {
-        private readonly IDestinoDespesaService destinoApp;
+        private readonly IDestinoDespesaService _destinoApp;
 
         public DestinoDespesaAppService(IDestinoDespesaService service) : base(service)
         {
-            destinoApp = service;
+            _destinoApp = service;
         }
     }
 }

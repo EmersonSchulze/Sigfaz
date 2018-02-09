@@ -194,6 +194,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\AddPhoneNumberViewModel.cs" />
+    <Compile Include="Model\AdminViewModel.cs" />
     <Compile Include="Model\ChangePasswordViewModel.cs" />
     <Compile Include="Model\FactorViewModel.cs" />
     <Compile Include="Model\ForgotPasswordViewModel.cs" />
@@ -217,12 +218,6 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Sigfaz.Infra.Data\Sigfaz.Infra.Data.csproj">
-      <Project>{704e9056-8c07-4bb7-9079-80387b8e0b9b}</Project>
-      <Name>Sigfaz.Infra.Data</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201801200117562_IdentiMigration.resx">

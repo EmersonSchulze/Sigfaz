@@ -7,16 +7,16 @@ namespace Sigfaz.Dominio.Servicos
 {
     public class CidadeService : ServiceBase<Cidade>, ICidadeService
     {
-        private readonly ICidadeRepository repository;
+        private readonly ICidadeRepository _repository;
 
         public CidadeService(ICidadeRepository cidadeRepository) : base(cidadeRepository)
         {
-            repository = cidadeRepository;
+            _repository = cidadeRepository;
         }
 
         public IEnumerable<Cidade> BuscarPorEstado(string descricao)
         {
-            return repository.BuscarPorEstado(descricao);
+            return _repository.BuscarPorEstado(descricao);
         }
     }
 }

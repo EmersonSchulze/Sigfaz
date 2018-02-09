@@ -30,6 +30,7 @@ namespace Sigfaz.Portal.AutoMapper
             CreateMap<UnidadeMedida, UnidadeMedidaIndexViewModel>();
             CreateMap<ClassificacaoLote, ClassificacaoLoteIndexViewModel>();
             CreateMap<Cultura, CulturaIndexViewModel>();
+            CreateMap<Cultura, CulturaViewModel>();
             CreateMap<DestinoDespesa, DestinoDespesaIndexViewModel>();
             CreateMap<Grupo, GrupoIndexViewModel>();
             CreateMap<ItemManutencao, ItemManutencaoIndexViewModel>();

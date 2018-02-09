@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
+using Sigfaz.Dominio.Entidades;
 
 namespace Sigfaz.Aplicacao.Interfaces
 {
@@ -7,6 +9,8 @@ namespace Sigfaz.Aplicacao.Interfaces
         void Incluir(TEntity obj);
         TEntity BuscaId(int id);
         IEnumerable<TEntity> BuscaTodos();
+
+        IEnumerable BuscaPrimeiros(int qtd);
         void Remover(TEntity obj);
         void Atualizar(TEntity obj);
         void Dispose();

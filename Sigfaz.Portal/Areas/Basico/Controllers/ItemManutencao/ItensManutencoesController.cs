@@ -9,20 +9,20 @@ namespace Sigfaz.Portal.Areas.Basico.Controllers.ItemManutencao
 {
     public class ItensManutencoesController : Controller
     {
-        private readonly IItemManutencaoAppService appService;
-        private readonly IMapper mapper;
+        private readonly IItemManutencaoAppService _appService;
+        private readonly IMapper _mapper;
 
         public ItensManutencoesController(IItemManutencaoAppService repositorio)
         {
-            this.appService = repositorio;
-            mapper = AutoMapperConfig.Mapper;
+            this._appService = repositorio;
+            _mapper = AutoMapperConfig.Mapper;
 
         }
 
         // GET: Cidade
         public ActionResult Index()
         {
-            var itemViewModel = mapper.Map<IEnumerable<Dominio.Entidades.ItemManutencao>, IEnumerable<ItemManutencaoIndexViewModel>>(appService.BuscaTodos());
+            var itemViewModel = _mapper.Map<IEnumerable<Dominio.Entidades.ItemManutencao>, IEnumerable<ItemManutencaoIndexViewModel>>(_appService.BuscaTodos());
             return View(itemViewModel);
         }
 

@@ -14,6 +14,9 @@ namespace Sigfaz.Portal.Areas.Basico
 
         public override void RegisterArea(AreaRegistrationContext context) 
         {
+            context.Routes.IgnoreRoute("{resource}.axd/{*pathinfo}");
+
+
             context.MapRoute(
                 "Estado_default",
                 "Basico/Estado/{controller}/{action}/{id}",

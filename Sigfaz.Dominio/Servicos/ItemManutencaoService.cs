@@ -6,11 +6,11 @@ namespace Sigfaz.Dominio.Servicos
 {
     public class ItemManutencaoService : ServiceBase<ItemManutencao>, IItemManutencaoService
     {
-        private readonly IItemManutencaoRepository repository;
+        private readonly IItemManutencaoRepository _repository;
 
         public ItemManutencaoService(IItemManutencaoRepository itemRepository) : base(itemRepository)
         {
-            repository = itemRepository;
+            _repository = itemRepository;
         }
     }
 }

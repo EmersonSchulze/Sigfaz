@@ -6,11 +6,11 @@ namespace Sigfaz.Dominio.Servicos
 {
     public class EstadoService : ServiceBase<Estado>, IEstadoService
     {
-        private readonly IEstadoRepository repository;
+        private readonly IEstadoRepository _repository;
 
         public EstadoService(IEstadoRepository estadoRepository) : base(estadoRepository)
         {
-            repository = estadoRepository;
+            _repository = estadoRepository;
         }
     }
 }

@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Linq.Expressions;
 
 namespace Sigfaz.Infra.Data.Repositorios
 {
@@ -28,6 +29,11 @@ namespace Sigfaz.Infra.Data.Repositorios
             return Bd.Set<TEntity>().ToList();
         }
 
+        public IEnumerable<TEntity> BuscaPrimeiros(int qtd)
+        {
+            return Bd.Set<TEntity>().Take(qtd).AsEnumerable();
+        }
+
         public void Dispose()
         {
            
@@ -44,5 +50,14 @@ namespace Sigfaz.Infra.Data.Repositorios
             Bd.Set<TEntity>().Remove(obj);
             Bd.SaveChanges();
         }
+
+        public IQueryable<TEntity> Consultar(Expression<Func<TEntity, bool>> dado = null)
+        {
+            var result = BuscaTodos();
+            if (dado != null)
+                result = result.Where(dado.Compile());
+            return result as IQueryable<TEntity>;
+        }
+
     }
 }

@@ -6,11 +6,11 @@ namespace Sigfaz.Aplicacao.Especializadas
 {
     public class ItemManutencaoAppService : AppServiceBase<ItemManutencao>, IItemManutencaoAppService
     {
-        private readonly IItemManutencaoService itemApp;
+        private readonly IItemManutencaoService _itemApp;
 
         public ItemManutencaoAppService(IItemManutencaoService service) : base(service)
         {
-            itemApp = service;
+            _itemApp = service;
         }
     }
 }

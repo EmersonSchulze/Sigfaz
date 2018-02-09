@@ -45,7 +45,9 @@ namespace Sigfaz.Infra.CrossCutting.Identity.Migrations
                         LockoutEnabled = c.Boolean(nullable: false),
                         AccessFailedCount = c.Int(nullable: false),
                         UserName = c.String(nullable: false, maxLength: 256, storeType: "nvarchar"),
-                    })
+                        Nome = c.String(nullable: false, maxLength: 256, storeType: "nvarchar"),
+                        Sobrenome = c.String(nullable: false, maxLength: 256, storeType: "nvarchar"),
+                })
                 .PrimaryKey(t => t.Id)
                 .Index(t => t.UserName, unique: true, name: "UserNameIndex");
             

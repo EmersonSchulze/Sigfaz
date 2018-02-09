@@ -6,11 +6,11 @@ namespace Sigfaz.Aplicacao.Especializadas
 {
     public class CulturaAppService : AppServiceBase<Cultura>, ICulturaAppService
     {
-        private readonly ICulturaService culturaApp;
+        private readonly ICulturaService _culturaApp;
 
         public CulturaAppService(ICulturaService service) : base(service)
         {
-            culturaApp = service;
+            _culturaApp = service;
         }
     }
 }

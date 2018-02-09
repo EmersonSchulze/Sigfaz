@@ -10,6 +10,8 @@ namespace Sigfaz.Dominio.Interfaces.Repositorios
         TEntity BuscaId(int id);
 
         IEnumerable<TEntity> BuscaTodos();
+
+        IEnumerable<TEntity> BuscaPrimeiros(int qtd);
         void Remover(TEntity obj);
         void Atualizar(TEntity obj);
 

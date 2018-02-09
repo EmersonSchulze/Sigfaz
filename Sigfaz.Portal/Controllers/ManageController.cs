@@ -273,10 +273,10 @@ namespace Sigfaz.Portal.Controllers
         // GET: /Manage/ManageLogins
         public async Task<ActionResult> ManageLogins(ManageMessageId? message)
         {
-            ViewBag.StatusMessage =
-                message == ManageMessageId.RemoveLoginSuccess ? "The external login was removed."
-                : message == ManageMessageId.Error ? "An error has occurred."
-                : "";
+            //ViewBag.StatusMessage =
+            //    message == ManageMessageId.RemoveLoginSuccess ? "The external login was removed."
+            //    : message == ManageMessageId.Error ? "An error has occurred."
+            //    : "";
             var user = await _userManager.FindByIdAsync(User.Identity.GetUserId());
             if (user == null)
             {

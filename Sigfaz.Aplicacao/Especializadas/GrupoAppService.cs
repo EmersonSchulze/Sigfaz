@@ -6,11 +6,11 @@ namespace Sigfaz.Aplicacao.Especializadas
 {
     public class GrupoAppService : AppServiceBase<Grupo>, IGrupoAppService
     {
-        private readonly IGrupoService grupoApp;
+        private readonly IGrupoService _grupoApp;
 
         public GrupoAppService(IGrupoService service) : base(service)
         {
-            grupoApp = service;
+            _grupoApp = service;
         }
     }
 }
