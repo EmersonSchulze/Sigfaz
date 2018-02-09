@@ -22,6 +22,14 @@ namespace Sigfaz.Infra.Data.EntityConfig
                 .IsRequired()
                 .HasMaxLength(256);
 
+            Property(u => u.Nome)
+                .IsRequired()
+                .HasMaxLength(256);
+
+            Property(u => u.SobreNome)
+                .IsRequired()
+                .HasMaxLength(256);
+
             ToTable("AspNetUsers");
         }
     }

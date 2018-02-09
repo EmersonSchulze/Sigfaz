@@ -46,13 +46,19 @@
     <div id="page-wrapper">
         <ul>
             <li>
-                @Html.Raw(BreadCrumb.Display())
+                @Html.Raw(BreadCrumb.DisplayRaw())
             </li>
         </ul>
         @RenderBody()
 
     </div>
-
+    <footer>  
+        <div class="content-wrapper">  
+            <div class="float-left">  
+                @Html.Partial("_Footer")  
+            </div>  
+        </div>  
+    </footer> 
     <!-- /#page-wrapper -->
 </div>
 <!-- /#wrapper -->

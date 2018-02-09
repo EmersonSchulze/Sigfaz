@@ -1,11 +1,12 @@
-﻿using AutoMapper;
+﻿using System.Collections.Generic;
+using System.Web.Mvc;
+using AutoMapper;
+using MvcBreadCrumbs;
 using Sigfaz.Aplicacao.Interfaces.Especializadas;
 using Sigfaz.Portal.Areas.Basico.ViewModels.UnidadeMedida;
 using Sigfaz.Portal.AutoMapper;
-using System.Collections.Generic;
-using System.Web.Mvc;
 
-namespace Sigfaz.Portal.Areas.Basico.Controllers.Estado
+namespace Sigfaz.Portal.Areas.Basico.Controllers.UnidadeMedida
 {
     public class UnidadeMedidasController : System.Web.Mvc.Controller
     {
@@ -22,6 +23,7 @@ namespace Sigfaz.Portal.Areas.Basico.Controllers.Estado
         // GET: Estado
         public ActionResult Index()
         {
+            BreadCrumb.Add(Url.Action("Index", "UnidadeMedidas", "UnidadeMedida_Default"), "Unidade de Medida");
             var unidadeViewModel = _mapper.Map<IEnumerable<Dominio.Entidades.UnidadeMedida>, IEnumerable<UnidadeMedidaIndexViewModel>>(_appService.BuscaTodos());
             return View(unidadeViewModel);
         }

@@ -6,7 +6,7 @@ namespace Sigfaz.Infra.CrossCutting.Identity.Model
     {
         [Required]
         [Phone]
-        [Display(Name = "Phone Number")]
+        [Display(Name = "Numero Telefone")]
         public string Number { get; set; }
     }
 }

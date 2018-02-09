@@ -9,7 +9,8 @@ namespace Sigfaz.Portal.Controllers
 
         public ActionResult Index()
         {
-            BreadCrumb.Add(Url.Action("Index", "Home", "Default"), "Sigfaz");
+            BreadCrumb.Clear();
+            BreadCrumb.Add("Home/Index","Home");
             return View();
         }
 

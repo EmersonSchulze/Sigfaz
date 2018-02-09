@@ -6,7 +6,7 @@ namespace Sigfaz.Infra.CrossCutting.Identity.Model
     {
         public string Id { get; set; }
         [Required(AllowEmptyStrings = false)]
-        [Display(Name = "Nome da Role")]
+        [Display(Name = "Nome da Regra")]
         public string Name { get; set; }
     }
 }

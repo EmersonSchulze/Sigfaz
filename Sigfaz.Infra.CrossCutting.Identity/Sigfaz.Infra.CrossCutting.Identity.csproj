@@ -194,6 +194,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\AddPhoneNumberViewModel.cs" />
+    <Compile Include="Model\AdminViewModel.cs" />
     <Compile Include="Model\ChangePasswordViewModel.cs" />
     <Compile Include="Model\FactorViewModel.cs" />
     <Compile Include="Model\ForgotPasswordViewModel.cs" />

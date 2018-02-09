@@ -5,12 +5,12 @@ namespace Sigfaz.Infra.CrossCutting.Identity.Model
     public class VerifyPhoneNumberViewModel
     {
         [Required]
-        [Display(Name = "Code")]
+        [Display(Name = "Codigo")]
         public string Code { get; set; }
 
         [Required]
         [Phone]
-        [Display(Name = "Phone Number")]
+        [Display(Name = "Numero Telefone")]
         public string PhoneNumber { get; set; }
     }
 }
